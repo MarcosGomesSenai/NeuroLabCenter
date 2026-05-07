@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teleconsulta | NeuroLab Center</title>
+  <meta name="description" content="Teleconsulta neurológica por vídeo na NeuroLab Center. Chat de dúvidas com IA, agendamento online e sala virtual segura." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-content">
+      <span><strong>NeuroLab Center</strong> | Neurologia, exames e teleconsulta</span>
+      <span>📞 (11) 4002-8922 &nbsp;|&nbsp; 📍 Santo André - SP</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="index.html">
+        <picture>
+          <source srcset="../../assets/img/logo1.webp" type="image/webp" />
+          <img alt="NeuroLab Center" src="../../assets/img/logo1.png" width="267" height="400" decoding="async" />
+        </picture>
+        <span>NeuroLab Center</span>
+      </a>
+      <nav>
+        <button class="menu-btn" onclick="abrirMenu()" aria-label="Menu">☰</button>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="exames.html">Exames</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="teleconsulta.html">Teleconsulta</a></li>
+          <li><a href="area-paciente.html">Área do Paciente</a></li>
+          <li><a href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a class="btn btn-light" href="index.html?modal=cadastro">Cadastrar</a>
+        <a class="btn btn-primary" href="index.html?modal=login">Entrar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- COMO FUNCIONA -->
+    <section class="consulta-online" id="consulta-online">
+      <div class="container consulta-grid-full">
+        <div class="section-title consulta-title-left">
+          <span class="quick-access-label">Teleconsulta</span>
+          <h2>Dúvidas com IA e consulta online</h2>
+          <p>O chat tira dúvidas gerais com segurança, sem prescrever remédios. Para atendimento médico, agende a teleconsulta.</p>
+        </div>
+
+        <!-- COMO FUNCIONA EM 4 PASSOS -->
+        <div class="view-style-003">
+          <h3 class="view-style-059">Como funciona?</h3>
+        </div>
+        <div class="como-funciona-grid">
+          <div class="como-funciona-card">
+            <div class="passo-num">1</div>
+            <h4>Cadastre-se</h4>
+            <p>Crie sua conta com CPF e dados básicos. É rápido e seguro.</p>
+          </div>
+          <div class="como-funciona-card">
+            <div class="passo-num">2</div>
+            <h4>Agende</h4>
+            <p>Escolha médico, data e horário. O link da sala será gerado automaticamente.</p>
+          </div>
+          <div class="como-funciona-card">
+            <div class="passo-num">3</div>
+            <h4>Entre na sala</h4>
+            <p>O botão de acesso libera 15 minutos antes do horário. Basta ter câmera e microfone.</p>
+          </div>
+          <div class="como-funciona-card">
+            <div class="passo-num">4</div>
+            <h4>Consulta</h4>
+            <p>Receba atendimento médico completo com prescrição e atestado quando necessário.</p>
+          </div>
+        </div>
+
+        <!-- OPÇÕES -->
+        <div class="consulta-option-grid view-style-060">
+          <div class="consulta-option-card">
+            <div class="icon">💬</div>
+            <h3>Chat de dúvidas</h3>
+            <p>A IA orienta sobre sintomas, exames e agendamento, mas não prescreve remédios nem substitui consulta médica.</p>
+            <button class="btn btn-light" onclick="abrirTriagemChat()">Iniciar chat</button>
+          </div>
+          <div class="consulta-option-card">
+            <div class="icon">📅</div>
+            <h3>Agendar teleconsulta</h3>
+            <p>Particular e convênio. O link da sala é gerado automaticamente após confirmação.</p>
+            <a class="btn btn-primary" href="agendamento.html?modo=online">Agendar teleconsulta</a>
+          </div>
+        </div>
+
+        <!-- REQUISITOS TÉCNICOS -->
+        <div class="consulta-option-card view-style-061">
+          <h3>📋 Requisitos técnicos</h3>
+          <div class="view-style-062">
+            <div class="view-style-044">
+              <div class="view-style-063">📷</div>
+              <strong class="view-style-064">Câmera</strong>
+              <p class="view-style-065">Webcam ou câmera do celular</p>
+            </div>
+            <div class="view-style-044">
+              <div class="view-style-063">🎤</div>
+              <strong class="view-style-064">Microfone</strong>
+              <p class="view-style-065">Embutido ou headset</p>
+            </div>
+            <div class="view-style-044">
+              <div class="view-style-063">📶</div>
+              <strong class="view-style-064">Internet</strong>
+              <p class="view-style-065">Conexão estável (min. 2Mbps)</p>
+            </div>
+          </div>
+          <div class="safe-note view-style-004">⚠ Teleconsulta disponível apenas nas modalidades <strong>Particular</strong> e <strong>Convênio</strong>. Não disponível pelo SUS.</div>
+        </div>
+
+        <!-- VANTAGENS -->
+        <div class="consulta-option-card view-style-061">
+          <h3>✨ Vantagens da teleconsulta</h3>
+          <div class="view-style-066">
+            <div class="info-row view-style-067"><strong>Sem deslocamento</strong><span>Atendimento no conforto da sua casa.</span></div>
+            <div class="info-row view-style-067"><strong>Ideal para idosos</strong><span>Reduz esforço e facilita o acompanhamento.</span></div>
+            <div class="info-row view-style-067"><strong>Receita digital</strong><span>Prescrição e atestado enviados por e-mail.</span></div>
+            <div class="info-row view-style-067"><strong>Chat integrado</strong><span>Troque mensagens com o médico durante a consulta.</span></div>
+          </div>
+        </div>
+
+        <!-- TRIAGEM, CHAT, AGENDAMENTO, SALA (mantidos do original) -->
+        <div class="triagem-card hidden" id="triagemCard">
+          <h3>Antes de abrir o chat, escolha uma opção:</h3>
+          <p class="safe-note">O chat é apenas para dúvidas e orientação inicial. Não indica remédios, doses ou diagnóstico.</p>
+          <div class="triagem-options">
+            <button onclick="selecionarTriagem('Estou com dor de cabeça')">Dor de cabeça</button>
+            <button onclick="selecionarTriagem('Estou com tontura')">Tontura</button>
+            <button onclick="selecionarTriagem('Estou com formigamento')">Formigamento</button>
+            <button onclick="selecionarTriagem('Tenho uma dúvida sobre consulta ou exame')">Dúvida</button>
+          </div>
+        </div>
+
+        <div class="chat-card hidden" id="chatCard">
+          <div class="chat-header"><strong>NeuroLab Dúvidas IA</strong><span>Seguro · Sem prescrição</span></div>
+          <div class="chat-body" id="chatBody">
+            <div class="msg bot">Olá! Posso responder dúvidas gerais sobre sintomas, exames e agendamento. Não indico remédios ou doses. Em emergências, procure atendimento imediatamente.</div>
+          </div>
+          <div class="chat-input">
+            <input id="chatMensagem" placeholder="Digite sua dúvida..." onkeydown="enviarComEnter(event)" aria-label="Mensagem do chat" />
+            <button onclick="enviarMensagemChat()">Enviar</button>
+          </div>
+        </div>
+
+        <div class="agendamento-online-card hidden" id="agendamentoOnlineCard">
+          <h3>Agendar teleconsulta</h3>
+          <p class="safe-note view-style-003">Teleconsulta disponível apenas nas modalidades Particular e Convênio.</p>
+
+          <!-- STEP A: Escolher médico -->
+          <div id="teleStepMedico">
+            <p class="view-style-068">1. Escolha o médico</p>
+            <div class="tele-medico-grid">
+              <div class="tele-medico-card" onclick="selecionarTeleMedico('Dra. Ana Beatriz Ferreira','AB','Neurologia Geral e Epilepsia',this)">
+                <div class="tele-medico-avatar">AB</div>
+                <strong>Dra. Ana Beatriz Ferreira</strong>
+                <small>Neurologia Geral e Epilepsia</small>
+                <div class="medico-rating">⭐ 4.9 · (127 avaliações)</div>
+              </div>
+              <div class="tele-medico-card" onclick="selecionarTeleMedico('Dr. Carlos Eduardo Moura','CE','Neurologia e Distúrbios do Sono',this)">
+                <div class="tele-medico-avatar">CE</div>
+                <strong>Dr. Carlos Eduardo Moura</strong>
+                <small>Neurologia e Distúrbios do Sono</small>
+                <div class="medico-rating">⭐ 4.7 · (89 avaliações)</div>
+              </div>
+              <div class="tele-medico-card" onclick="selecionarTeleMedico('Dr. Rafael Mendes','RM','Enxaqueca e Cefaleia',this)">
+                <div class="tele-medico-avatar">RM</div>
+                <strong>Dr. Rafael Mendes</strong>
+                <small>Enxaqueca e Cefaleia</small>
+                <div class="medico-rating">⭐ 4.8 · (64 avaliações)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP B: Data/horário — aparece após selecionar médico -->
+          <div id="teleStepForm" class="view-style-069">
+            <p class="view-style-068">2. Dados e horário</p>
+            <div class="agenda-form">
+              <div class="field"><label>Médico selecionado</label><input id="agendaMedicoNome" readonly class="view-style-070" /></div>
+              <div class="field"><label>Nome do paciente</label><input id="agendaNome" placeholder="Seu nome completo" /></div>
+              <div class="field"><label>Cobertura</label><select id="agendaCobertura"><option>Particular</option><option>Convênio</option></select></div>
+              <div class="field"><label>Especialidade</label><select id="agendaEspecialidade"><option value="" selected disabled>Escolha a especialidade</option><option>Neurologia geral</option><option>Enxaqueca e cefaleia</option><option>Memória e Alzheimer</option><option>Distúrbios do sono</option><option>Neuropediatria</option></select></div>
+              <div class="field"><label>Data preferida</label><input id="agendaData" type="date" /></div>
+              <div class="field"><label>Horário disponível</label>
+                <select id="agendaHorario">
+                  <option value="">-- Selecione uma data primeiro --</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" onclick="confirmarConsultaOnline()">Confirmar teleconsulta</button>
+            </div>
+          </div>
+
+          <div class="agenda-confirmacao hidden" id="agendaConfirmacao">
+            <strong>Teleconsulta confirmada</strong>
+            <p id="agendaResumo"></p>
+            <button class="btn btn-light" onclick="entrarLigacaoMedico()">Entrar na sala virtual</button>
+          </div>
+        </div>
+
+        <div class="video-consulta hidden" id="salaConsulta">
+          <div class="video-topbar"><strong>Sala virtual NeuroLab</strong><span>Médico ainda não entrou</span></div>
+          <div class="video-grid">
+            <div class="video-box medico"><span>👨‍⚕️</span><h3>Médico</h3><p>Aguardando o médico entrar na chamada</p></div>
+            <div class="video-box paciente" id="pacienteVideoBox">
+              <video id="videoPaciente" autoplay muted playsinline></video>
+              <div class="camera-placeholder" id="cameraPlaceholder"><span>🙂</span><h3>Paciente</h3><p>Clique em Permitir para liberar sua câmera</p></div>
+            </div>
+          </div>
+          <div class="chat-card mini-chat">
+            <div class="chat-header"><strong>Chat da consulta</strong><span>Texto com o médico</span></div>
+            <div class="chat-body" id="salaChatBody"><div class="msg bot">Você entrou na sala. Aguarde o médico iniciar o atendimento.</div></div>
+            <div class="chat-input"><input id="salaMensagem" placeholder="Mensagem para o médico..." onkeydown="enviarSalaComEnter(event)" aria-label="Mensagem da sala" /><button onclick="enviarMensagemSala()">Enviar</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/551140028922" target="_blank">💬</a>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>NeuroLab Center</h3>
+        <p>Clínica de Neurologia com atendimento humanizado, tecnologia e segurança.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="index.html">Home</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="exames.html">Exames</a>
+        <a href="unidades.html">Unidades</a>
+      </div>
+      <div>
+        <h4>Paciente</h4>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="teleconsulta.html">Teleconsulta</a>
+        <a href="area-paciente.html">Área do Paciente</a>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+        <a href="ajuda.html">Central de Ajuda</a>
+        <a href="politica-privacidade.html">Política de Privacidade</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>📞 (11) 4002-8922</p>
+        <p>✉ contato@neurolabcenter.com.br</p>
+        <p>📍 Santo André - SP</p>
+        <p>🕐 Seg-Sex: 7h–19h | Sáb: 8h–13h</p>
+        <div class="footer-legal">
+          <span class="footer-selo">🔒 LGPD</span>
+          <span class="footer-selo">🛡️ Dados Protegidos</span>
+        </div>
+      </div>
+    </div>
+    <div class="container copy">© 2026 NeuroLab Center. Todos os direitos reservados. | LGPD: seus dados são protegidos.</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/shared/toast.js"></script>
+  <script src="../../assets/js/shared/auth-header.js"></script>
+  <script src="../../assets/js/shared/appointment-rules.js"></script>
+  <script src="../../assets/js/shared/navigation-search.js"></script>
+  <script src="../../assets/js/shared/exam-info.js"></script>
+  <script src="../../assets/js/shared/address-search.js"></script>
+  <script src="../../assets/js/shared/medical-chat.js"></script>
+  <script src="../../assets/js/shared/teleconsultation-room.js"></script>
+  <script src="../../assets/js/app/state-storage.js"></script>
+  <script src="../../assets/js/app/modals-navigation.js"></script>
+  <script src="../../assets/js/app/forms-auth.js"></script>
+  <script src="../../assets/js/app/booking-flow.js"></script>
+  <script src="../../assets/js/app/ratings-dashboard.js"></script>
+  <script src="../../assets/js/init/dom-ready.js"></script>
+  <script src="../../assets/js/pages/home-effects.js"></script>
+  <script src="../../assets/js/data/clinic-data.js"></script>
+  <script src="../../assets/js/pages/layout-home.js"></script>
+  <script src="../../assets/js/features/booking-basic.js"></script>
+  <script src="../../assets/js/pages/plans-units-patient.js"></script>
+  <script src="../../assets/js/pages/teleconsultation-page.js"></script>
+  <script src="../../assets/js/features/booking-search-legacy.js"></script>
+  <script src="../../assets/js/features/booking-search-v2.js"></script>
+  <script src="../../assets/js/pages/health-plans.js"></script>
+  <script src="../../assets/js/features/visual-polish.js"></script>
+  <script src="../../assets/js/features/command-search.js"></script>
+  <script src="../../assets/js/features/forms-validation.js"></script>
+  <script src="../../assets/js/features/favorites-plans-drafts.js"></script>
+  <script src="../../assets/js/features/action-panel.js"></script>
+  <script src="../../assets/js/init/legacy-startup.js"></script>
+  <script src="../../assets/js/features/booking-action-panel.js"></script>
+  <script src="../../assets/js/features/booking-suggestions.js"></script>
+  <script src="../../assets/js/features/booking-simple.js"></script>
+  <script src="../../assets/js/features/address-autocomplete.js"></script>
+  <script src="../../assets/js/pages/teleconsulta-schedule.js"></script>
+</body>
+
+</html>

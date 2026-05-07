@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exames | NeuroLab Center</title>
+  <meta name="description" content="Catálogo de exames neurológicos com preparo, duração, contraindicações e agendamento." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-content">
+      <span><strong>NeuroLab Center</strong> | Neurologia, exames e teleconsulta</span>
+      <span>📞 (11) 4002-8922 &nbsp;|&nbsp; 📍 Santo André - SP</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="index.html">
+        <picture>
+          <source srcset="../../assets/img/logo1.webp" type="image/webp" />
+          <img alt="NeuroLab Center" src="../../assets/img/logo1.png" width="267" height="400" decoding="async" />
+        </picture>
+        <span>NeuroLab Center</span>
+      </a>
+      <nav>
+        <button class="menu-btn" onclick="abrirMenu()" aria-label="Menu">☰</button>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="exames.html">Exames</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="teleconsulta.html">Teleconsulta</a></li>
+          <li><a href="area-paciente.html">Área do Paciente</a></li>
+          <li><a href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a class="btn btn-light" href="index.html?modal=cadastro">Cadastrar</a>
+        <a class="btn btn-primary" href="index.html?modal=login">Entrar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero view-style-045">
+      <div class="container">
+        <span class="quick-access-label">Exames diagnósticos</span>
+        <h1>Preparo claro antes de confirmar o horário.</h1>
+        <p>Os exames exibem duração, instruções e alertas de contraindicação antes do agendamento, conforme as regras RB-180 a RB-184.</p>
+        <div class="page-actions">
+          <button class="btn btn-light btn-big" onclick="abrirAgendamento()">Agendar exame</button>
+          <a class="btn btn-primary btn-big" href="unidades.html">Buscar unidade</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-band">
+      <div class="container">
+        <div class="section-title">
+          <h2>Catálogo de exames</h2>
+          <p>Clique em um exame para ver preparo, duração e avisos.</p>
+        </div>
+        <div class="exam-sticker-area">
+          <div class="exam-info-panel" id="examInfoPanel">
+            <span class="quick-access-label exam-label">Exame selecionado</span>
+            <h3 id="examInfoTitle">Eletroencefalograma (EEG)</h3>
+            <div class="exam-meta" id="examMeta">
+              <span>⏱ ~40 min</span>
+              <span class="tag">Preparo necessário</span>
+            </div>
+            <p id="examInfoText">Avalia a atividade elétrica cerebral. Auxilia na investigação de crises epilépticas, epilepsia e alterações neurológicas.</p>
+            <div class="exam-prep" id="examPrep">
+              <strong>Instruções de preparo:</strong>
+              <ul id="examPrepList">
+                <li>Não usar gel, spray ou pomada no cabelo</li>
+                <li>Lavar e secar bem o cabelo no dia do exame</li>
+                <li>Evitar cafeína nas 24h anteriores</li>
+              </ul>
+            </div>
+            <div class="exam-contra hidden" id="examContra">
+              <strong>Contraindicações:</strong>
+              <p id="examContraText"></p>
+            </div>
+            <button class="btn btn-primary" onclick="abrirAgendamento()">Agendar este exame</button>
+          </div>
+          <div class="exam-stickers">
+            <button class="exam-sticker active" onclick="selecionarExame(0)" onmouseenter="selecionarExame(0)"><span>🧠</span><strong>EEG</strong><small>Atividade cerebral</small></button>
+            <button class="exam-sticker" onclick="selecionarExame(1)" onmouseenter="selecionarExame(1)"><span>⚡</span><strong>ENMG</strong><small>Nervos e músculos</small></button>
+            <button class="exam-sticker" onclick="selecionarExame(2)" onmouseenter="selecionarExame(2)"><span>💤</span><strong>Polissonografia</strong><small>Exame do sono</small></button>
+            <button class="exam-sticker" onclick="selecionarExame(3)" onmouseenter="selecionarExame(3)"><span>🩺</span><strong>Doppler</strong><small>Fluxo sanguíneo</small></button>
+            <button class="exam-sticker" onclick="selecionarExame(4)" onmouseenter="selecionarExame(4)"><span>🧲</span><strong>Ressonância</strong><small>Imagem cerebral</small></button>
+            <button class="exam-sticker" onclick="selecionarExame(5)" onmouseenter="selecionarExame(5)"><span>📡</span><strong>Pot. Evocado</strong><small>Vias neurais</small></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUANDO FAZER EXAMES -->
+    <section class="content-band light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Quando fazer exames neurológicos?</h2>
+          <p>Exames são indicados para investigar a causa de sintomas neurológicos recorrentes.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card feature-card">
+            <div class="icon">🤕</div>
+            <h3>Cefaleias persistentes</h3>
+            <p>Enxaquecas que não respondem a tratamento ou dores de cabeça com características atípicas.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="icon">⚡</div>
+            <h3>Crises convulsivas</h3>
+            <p>Episódios de convulsão, desmaios inexplicados ou suspeita de epilepsia requerem EEG.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="icon">💤</div>
+            <h3>Distúrbios do sono</h3>
+            <p>Ronco excessivo, apneia, insônia crônica ou sonolência diurna indicam polissonografia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONVÊNIOS PARA EXAMES -->
+    <section class="content-band">
+      <div class="container">
+        <div class="section-title">
+          <h2>Convênios aceitos para exames</h2>
+          <p>Consulte a cobertura do seu plano antes de agendar.</p>
+        </div>
+        <div class="convenios-exames-grid">
+          <div class="convenio-card">
+            <div class="conv-icon">🏥</div>
+            <strong>Unimed</strong>
+            <span>Todos os exames com autorização prévia.</span>
+          </div>
+          <div class="convenio-card">
+            <div class="conv-icon">💙</div>
+            <strong>Bradesco Saúde</strong>
+            <span>EEG, ENMG e Polissonografia cobertos.</span>
+          </div>
+          <div class="convenio-card">
+            <div class="conv-icon">🌿</div>
+            <strong>SulAmérica</strong>
+            <span>Cobertura completa para neurologia.</span>
+          </div>
+          <div class="convenio-card">
+            <div class="conv-icon">🔵</div>
+            <strong>Amil / Porto Seguro / NotreDame</strong>
+            <span>Verificar autorização conforme o plano.</span>
+          </div>
+          <div class="convenio-card">
+            <div class="conv-icon">💳</div>
+            <strong>Particular</strong>
+            <span>Todos os exames disponíveis sem necessidade de autorização prévia.</span>
+          </div>
+        </div>
+        <p class="safe-note view-style-046">⚠ Em caso de dúvida sobre a cobertura do seu plano, entre em contato conosco antes de agendar.</p>
+      </div>
+    </section>
+
+    <!-- SOBRE RESULTADOS -->
+    <section class="content-band light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Como funciona o resultado</h2>
+          <p>Após realizar o exame, veja os próximos passos.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>📋 Laudo em até 5 dias</h3>
+            <p>O laudo é elaborado pelo neurologista responsável e disponibilizado na Área do Paciente.</p>
+          </div>
+          <div class="card">
+            <h3>📲 Notificação</h3>
+            <p>Você recebe um aviso por WhatsApp e e-mail quando o resultado estiver disponível.</p>
+          </div>
+          <div class="card">
+            <h3>🔒 Segurança</h3>
+            <p>Resultados são dados sensíveis e ficam protegidos com criptografia conforme a LGPD.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/551140028922" target="_blank">💬</a>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>NeuroLab Center</h3>
+        <p>Clínica de Neurologia com atendimento humanizado, tecnologia e segurança.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="index.html">Home</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="exames.html">Exames</a>
+        <a href="unidades.html">Unidades</a>
+      </div>
+      <div>
+        <h4>Paciente</h4>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="teleconsulta.html">Teleconsulta</a>
+        <a href="area-paciente.html">Área do Paciente</a>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+        <a href="ajuda.html">Central de Ajuda</a>
+        <a href="politica-privacidade.html">Política de Privacidade</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>📞 (11) 4002-8922</p>
+        <p>✉ contato@neurolabcenter.com.br</p>
+        <p>📍 Santo André - SP</p>
+        <p>🕐 Seg-Sex: 7h–19h | Sáb: 8h–13h</p>
+        <div class="footer-legal">
+          <span class="footer-selo">🔒 LGPD</span>
+          <span class="footer-selo">🛡️ Dados Protegidos</span>
+        </div>
+      </div>
+    </div>
+    <div class="container copy">© 2026 NeuroLab Center. Todos os direitos reservados. | LGPD: seus dados são protegidos.</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/shared/toast.js"></script>
+  <script src="../../assets/js/shared/auth-header.js"></script>
+  <script src="../../assets/js/shared/appointment-rules.js"></script>
+  <script src="../../assets/js/shared/navigation-search.js"></script>
+  <script src="../../assets/js/shared/exam-info.js"></script>
+  <script src="../../assets/js/shared/address-search.js"></script>
+  <script src="../../assets/js/shared/medical-chat.js"></script>
+  <script src="../../assets/js/shared/teleconsultation-room.js"></script>
+  <script src="../../assets/js/app/state-storage.js"></script>
+  <script src="../../assets/js/app/modals-navigation.js"></script>
+  <script src="../../assets/js/app/forms-auth.js"></script>
+  <script src="../../assets/js/app/booking-flow.js"></script>
+  <script src="../../assets/js/app/ratings-dashboard.js"></script>
+  <script src="../../assets/js/init/dom-ready.js"></script>
+  <script src="../../assets/js/pages/home-effects.js"></script>
+  <script src="../../assets/js/data/clinic-data.js"></script>
+  <script src="../../assets/js/pages/layout-home.js"></script>
+  <script src="../../assets/js/features/booking-basic.js"></script>
+  <script src="../../assets/js/pages/plans-units-patient.js"></script>
+  <script src="../../assets/js/pages/teleconsultation-page.js"></script>
+  <script src="../../assets/js/features/booking-search-legacy.js"></script>
+  <script src="../../assets/js/features/booking-search-v2.js"></script>
+  <script src="../../assets/js/pages/health-plans.js"></script>
+  <script src="../../assets/js/features/visual-polish.js"></script>
+  <script src="../../assets/js/features/command-search.js"></script>
+  <script src="../../assets/js/features/forms-validation.js"></script>
+  <script src="../../assets/js/features/favorites-plans-drafts.js"></script>
+  <script src="../../assets/js/features/action-panel.js"></script>
+  <script src="../../assets/js/init/legacy-startup.js"></script>
+  <script src="../../assets/js/features/booking-action-panel.js"></script>
+  <script src="../../assets/js/features/booking-suggestions.js"></script>
+  <script src="../../assets/js/features/booking-simple.js"></script>
+  <script src="../../assets/js/features/address-autocomplete.js"></script>
+</body>
+
+</html>
+

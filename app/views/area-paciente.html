@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área do Paciente | NeuroLab Center</title>
+  <meta name="description" content="Central do paciente NeuroLab Center: gerencie agendamentos, dependentes, documentos, avaliações e histórico em um só lugar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-content">
+      <span><strong>NeuroLab Center</strong> | Neurologia, exames e teleconsulta</span>
+      <span>📞 (11) 4002-8922 &nbsp;|&nbsp; 📍 Santo André - SP</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="index.html">
+        <picture>
+          <source srcset="../../assets/img/logo1.webp" type="image/webp" />
+          <img alt="NeuroLab Center" src="../../assets/img/logo1.png" width="267" height="400" decoding="async" />
+        </picture>
+        <span>NeuroLab Center</span>
+      </a>
+      <nav>
+        <button class="menu-btn" onclick="abrirMenu()" aria-label="Menu">☰</button>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="exames.html">Exames</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="teleconsulta.html">Teleconsulta</a></li>
+          <li><a href="area-paciente.html">Área do Paciente</a></li>
+          <li><a href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a class="btn btn-light" href="index.html?modal=cadastro">Cadastrar</a>
+        <a class="btn btn-primary" href="index.html?modal=login">Entrar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="quick-access-label">Área do Paciente</span>
+        <h1>Consultas, dependentes e histórico em um só lugar.</h1>
+        <p>Uma central segura para acompanhar agendamentos, cancelamentos, check-in, fila de espera, documentos e avaliações.</p>
+        <div class="page-actions">
+          <button class="btn btn-light btn-big" onclick="abrirAgendamento()">Novo agendamento</button>
+          <a class="btn btn-primary btn-big" href="index.html?modal=login">Entrar com CPF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD DINÂMICO -->
+    <section class="content-band light">
+      <div class="container">
+        <div class="patient-app-shell">
+          <!-- Coluna lateral: Perfil e Família -->
+          <aside class="patient-sidebar">
+            <div class="view-style-020">
+              <div class="patient-avatar view-style-021" id="avatarBox" onclick="document.getElementById('fotoPerfilInput').click()">
+                <span id="avatarInitials">EU</span>
+                <div class="view-style-022">📷 Alterar</div>
+              </div>
+              <input type="file" id="fotoPerfilInput" accept="image/*" onchange="mostrarToast('success', 'Foto atualizada com sucesso!')" class="view-style-023">
+            </div>
+            
+            <div class="view-style-024">
+              <h2 id="dashWelcome" class="view-style-025">Bem-vindo(a)!</h2>
+              <span id="perfilCpf" class="view-style-026">Faça login</span>
+            </div>
+
+            <div class="form-group view-style-027">
+              <label class="view-style-028">👥 Conta Família</label>
+              <select class="form-select view-style-029" id="contaFamiliaSelect" onchange="mostrarToast('info', 'Trocando para perfil de ' + this.options[this.selectedIndex].text)">
+                <option value="principal">Minha Conta (Principal)</option>
+                <option value="dependente1">João Silva (Filho)</option>
+                <option value="dependente2">Maria Silva (Mãe)</option>
+              </select>
+            </div>
+
+            <hr class="view-style-030">
+
+            <div class="perfil-card view-style-031" id="perfilCard">
+              <div class="perfil-item view-style-032"><span>Nascimento</span><span id="perfilNasc">—</span></div>
+              <div class="perfil-item view-style-032"><span>Telefone</span><span id="perfilTel">—</span></div>
+              <div class="perfil-item view-style-032"><span>Tipo</span><span id="perfilTipo">—</span></div>
+            </div>
+          </aside>
+
+          <!-- Coluna principal -->
+          <section class="patient-main-panel">
+            <div class="patient-card-lg">
+              <div>
+                <h3>Agende sua próxima consulta</h3>
+                <p class="view-style-033">Especialistas disponíveis para atendimento presencial e teleconsulta.</p>
+              </div>
+              <button class="btn btn-primary" onclick="abrirAgendamento()">+ Novo agendamento</button>
+            </div>
+
+            <!-- Próximas consultas -->
+            <div class="view-style-034">
+              <h3 class="view-style-035">📅 Suas Consultas</h3>
+              <div class="appointment-list" id="dashboardAgendamentos">
+                <div class="appointment-card view-style-036">
+                  <span class="status-pill view-style-037">CONFIRMADO</span>
+                  <strong class="view-style-038">Dra. Ana Beatriz Ferreira</strong>
+                  <span class="view-style-039">Seg, 05/Mai às 09:30 · Santo André - Centro</span>
+                  <div class="view-style-040">
+                    <button class="btn btn-light view-style-041" onclick="abrirAgendamento()">Reagendar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ações rápidas -->
+            <div>
+              <h3 class="view-style-035">⚡ Central de Ações</h3>
+              <div class="patient-module-grid">
+                <article>
+                  <strong>📝 Anamnese Digital</strong>
+                  <p class="view-style-042">Preencha antes da consulta para adiantar o atendimento.</p>
+                  <button class="btn btn-light view-style-043" onclick="abrirModalPaciente('anamnese')">Preencher</button>
+                </article>
+                <article>
+                  <strong>⭐ Avaliar Consultas</strong>
+                  <p class="view-style-042">Ajude outros pacientes avaliando seus atendimentos.</p>
+                  <button class="btn btn-light view-style-043" onclick="abrirModalAvaliacao()">Ver histórico</button>
+                </article>
+                <article>
+                  <strong>📱 Check-in Online</strong>
+                  <p class="view-style-042">Gere seu QR Code de acesso à clínica.</p>
+                  <button class="btn btn-light view-style-043" onclick="abrirModalPaciente('checkin')">Gerar QR Code</button>
+                </article>
+                <article>
+                  <strong>👨‍👩‍👧 Gerenciar Dependentes</strong>
+                  <p class="view-style-042">Adicione menores de idade ou idosos.</p>
+                  <button class="btn btn-light view-style-043" onclick="abrirModalPaciente('dependentes')">Configurar</button>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="content-band">
+      <div class="container">
+        <div class="grid-4 feature-grid">
+          <div class="card feature-card"><div class="icon">🔒</div><h3>Privacidade</h3><p>CPF, documentos e histórico são tratados como dados sensíveis conforme LGPD.</p></div>
+          <div class="card feature-card"><div class="icon">👨‍👩‍👧</div><h3>Dependentes</h3><p>Responsável pode agendar para menores e idosos vinculados à conta.</p></div>
+          <div class="card feature-card"><div class="icon">🔔</div><h3>Lembretes</h3><p>Confirmações e lembretes 24h e 2h antes via WhatsApp e e-mail.</p></div>
+          <div class="card feature-card"><div class="icon">⭐</div><h3>Avaliações</h3><p>Comentários públicos exigem consentimento e passam por moderação em 48h.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAIS -->
+  <div class="modal-overlay" id="modalPaciente">
+    <div class="modal-card">
+      <button class="modal-close" onclick="fecharModal('modalPaciente')">×</button>
+      <h3 id="modalTitulo">Cadastro com CPF</h3>
+      <p id="modalTexto">Informe CPF, nome completo, data de nascimento, telefone e aceite os termos de uso.</p>
+      <a class="btn btn-primary" href="index.html?modal=cadastro">Começar agora</a>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalAvaliacao">
+    <div class="modal-card modal-form-card">
+      <button class="modal-close" onclick="fecharModal('modalAvaliacao')">×</button>
+      <div class="modal-header-icon">⭐</div>
+      <h3>Avaliar consulta</h3>
+      <p>Avaliação anônima. O comentário só é publicado com consentimento e moderação.</p>
+      <div class="avaliacao-item"><label>Nota do médico *</label><div class="estrelas" id="estrelasMedico" data-campo="medico"></div></div>
+      <div class="avaliacao-item"><label>Nota da recepção/unidade *</label><div class="estrelas" id="estrelasRecepcao" data-campo="recepcao"></div></div>
+      <div class="avaliacao-item"><label>Nota do agendamento online *</label><div class="estrelas" id="estrelasAgendamento" data-campo="agendamento"></div></div>
+      <div class="avaliacao-item"><label>NPS: Você indicaria a NeuroLab? *</label><div class="nps-scale" id="npsScale"></div></div>
+      <div class="form-group"><label>Comentário</label><textarea id="avaliacaoComentario" rows="3" maxlength="500" oninput="atualizarCharCount()"></textarea><small id="charCount">0 / 500</small></div>
+      <div class="form-group checkbox-group"><label class="checkbox-label"><input type="checkbox" id="consentimentoPublicacao" onchange="verificarAvaliacao()" /><span>Autorizo a publicação anônima do meu comentário no perfil do médico e/ou da unidade.</span></label></div>
+      <span class="field-hint" id="avaliacaoHint"></span>
+      <button class="btn btn-primary btn-full" id="btnEnviarAvaliacao" onclick="enviarAvaliacao()" disabled>Enviar avaliação</button>
+    </div>
+  </div>
+
+  <a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/551140028922" target="_blank">💬</a>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>NeuroLab Center</h3>
+        <p>Clínica de Neurologia com atendimento humanizado, tecnologia e segurança.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="index.html">Home</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="exames.html">Exames</a>
+        <a href="unidades.html">Unidades</a>
+      </div>
+      <div>
+        <h4>Paciente</h4>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="teleconsulta.html">Teleconsulta</a>
+        <a href="area-paciente.html">Área do Paciente</a>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+        <a href="politica-privacidade.html">Política de Privacidade</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>📞 (11) 4002-8922</p>
+        <p>✉ contato@neurolabcenter.com.br</p>
+        <p>📍 Santo André - SP</p>
+        <p>🕐 Seg-Sex: 7h–19h | Sáb: 8h–13h</p>
+        <div class="footer-legal">
+          <span class="footer-selo">🔒 LGPD</span>
+          <span class="footer-selo">🛡️ Dados Protegidos</span>
+        </div>
+      </div>
+    </div>
+    <div class="container copy">© 2026 NeuroLab Center. Todos os direitos reservados. | LGPD: seus dados são protegidos.</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/shared/toast.js"></script>
+  <script src="../../assets/js/shared/auth-header.js"></script>
+  <script src="../../assets/js/shared/appointment-rules.js"></script>
+  <script src="../../assets/js/shared/navigation-search.js"></script>
+  <script src="../../assets/js/shared/exam-info.js"></script>
+  <script src="../../assets/js/shared/address-search.js"></script>
+  <script src="../../assets/js/shared/medical-chat.js"></script>
+  <script src="../../assets/js/shared/teleconsultation-room.js"></script>
+  <script src="../../assets/js/app/state-storage.js"></script>
+  <script src="../../assets/js/app/modals-navigation.js"></script>
+  <script src="../../assets/js/app/forms-auth.js"></script>
+  <script src="../../assets/js/app/booking-flow.js"></script>
+  <script src="../../assets/js/app/ratings-dashboard.js"></script>
+  <script src="../../assets/js/init/dom-ready.js"></script>
+  <script src="../../assets/js/pages/home-effects.js"></script>
+  <script src="../../assets/js/data/clinic-data.js"></script>
+  <script src="../../assets/js/pages/layout-home.js"></script>
+  <script src="../../assets/js/features/booking-basic.js"></script>
+  <script src="../../assets/js/pages/plans-units-patient.js"></script>
+  <script src="../../assets/js/pages/teleconsultation-page.js"></script>
+  <script src="../../assets/js/features/booking-search-legacy.js"></script>
+  <script src="../../assets/js/features/booking-search-v2.js"></script>
+  <script src="../../assets/js/pages/health-plans.js"></script>
+  <script src="../../assets/js/features/visual-polish.js"></script>
+  <script src="../../assets/js/features/command-search.js"></script>
+  <script src="../../assets/js/features/forms-validation.js"></script>
+  <script src="../../assets/js/features/favorites-plans-drafts.js"></script>
+  <script src="../../assets/js/features/action-panel.js"></script>
+  <script src="../../assets/js/init/legacy-startup.js"></script>
+  <script src="../../assets/js/features/booking-action-panel.js"></script>
+  <script src="../../assets/js/features/booking-suggestions.js"></script>
+  <script src="../../assets/js/features/booking-simple.js"></script>
+  <script src="../../assets/js/features/address-autocomplete.js"></script>
+  <script src="../../assets/js/pages/area-paciente-dashboard.js"></script>
+</body>
+
+</html>

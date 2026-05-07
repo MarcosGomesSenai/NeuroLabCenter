@@ -1,0 +1,1400 @@
+/* ============================================================
+   CANCEL MODAL (overlay escuro, botão Voltar favorecido)
+   ============================================================ */
+.modal-cancel-overlay {
+  background: rgba(15, 20, 20, 0.72) !important;
+}
+
+.cancel-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-cancel-voltar {
+  background: var(--verde-principal);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 100%;
+  box-shadow: 0 10px 26px rgba(0,116,118,0.24);
+}
+
+.btn-cancel-voltar:hover {
+  background: #005F61;
+  transform: translateY(-2px);
+}
+
+.btn-cancel-confirmar {
+  background: transparent;
+  color: var(--verde-secundario);
+  border: 2px solid var(--verde-secundario);
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 100%;
+}
+
+.btn-cancel-confirmar:hover {
+  background: rgba(72,163,167,0.08);
+}
+
+/* ============================================================
+   SYMPTOM CARDS (Quando procurar)
+   ============================================================ */
+.sintomas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.sintoma-card {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.sintoma-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra);
+  border-color: var(--verde-secundario);
+}
+
+.sintoma-card .sintoma-icone {
+  font-size: 40px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.sintoma-card h4 {
+  color: var(--verde-dark);
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.sintoma-card p {
+  color: var(--texto-claro);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* ============================================================
+   EQUIPE MÉDICA
+   ============================================================ */
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.equipe-card {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 8px 26px rgba(0,116,118,0.07);
+  transition: 0.25s;
+}
+
+.equipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+}
+
+.equipe-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--verde-principal), var(--verde-secundario));
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 24px;
+  font-family: 'Sora', sans-serif;
+  margin: 0 auto 16px;
+}
+
+.equipe-card h4 {
+  color: var(--verde-dark);
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.equipe-card .equipe-crm {
+  color: var(--texto-claro);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.equipe-card .equipe-espec {
+  color: var(--verde-principal);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.equipe-card .medico-rating {
+  font-size: 14px;
+  color: var(--verde-dark);
+}
+
+/* ============================================================
+   UNIDADE CARD RICH
+   ============================================================ */
+.unidade-rica {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 8px 26px rgba(0,116,118,0.07);
+  transition: 0.25s;
+}
+
+.unidade-rica:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+}
+
+.unidade-rica h3 {
+  color: var(--verde-dark);
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.unidade-detalhe {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--texto-claro);
+}
+
+.unidade-detalhe span:first-child {
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.acessibilidade-icons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.acessibilidade-icons span {
+  background: var(--verde-muito-claro);
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--verde-dark);
+}
+
+/* ============================================================
+   DYNAMIC DASHBOARD (AREA DO PACIENTE)
+   ============================================================ */
+.dashboard-header {
+  background: linear-gradient(135deg, var(--verde-principal), var(--verde-secundario));
+  color: white;
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  box-shadow: var(--sombra-lg);
+}
+
+.dashboard-header h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.dashboard-header p {
+  color: rgba(255,255,255,0.82);
+  font-size: 15px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.dashboard-section {
+  margin-bottom: 24px;
+}
+
+.dashboard-section h3 {
+  color: var(--verde-dark);
+  font-size: 18px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.empty-state {
+  background: var(--fundo);
+  border: 1px dashed var(--borda);
+  border-radius: 18px;
+  padding: 32px;
+  text-align: center;
+  color: var(--texto-claro);
+  font-size: 14px;
+}
+
+.empty-state span {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.perfil-card {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0,116,118,0.06);
+}
+
+.perfil-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--fundo);
+  font-size: 14px;
+}
+
+.perfil-item:last-child {
+  border-bottom: none;
+}
+
+.perfil-item span:first-child {
+  color: var(--texto-claro);
+}
+
+.perfil-item span:last-child {
+  color: var(--verde-dark);
+  font-weight: 600;
+}
+
+/* ============================================================
+   HOW IT WORKS (TELECONSULTA)
+   ============================================================ */
+.como-funciona-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.como-funciona-card {
+  background: rgba(255,255,255,0.95);
+  color: var(--texto);
+  border-radius: 22px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(15,63,64,0.15);
+}
+
+.como-funciona-card .passo-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--verde-principal);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 18px;
+  font-family: 'Sora', sans-serif;
+  margin: 0 auto 14px;
+}
+
+.como-funciona-card h4 {
+  color: var(--verde-dark);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.como-funciona-card p {
+  color: var(--texto-claro);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   FOOTER SOCIAL + LEGAL
+   ============================================================ */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.footer-social a:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateY(-2px);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.footer-selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .exam-sticker-area {
+    grid-template-columns: 1fr;
+  }
+
+  .exam-info-panel {
+    position: static;
+  }
+
+  .exam-stickers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .agenda-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .agenda-form .btn {
+    grid-column: 1 / -1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+
+  header {
+    top: 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .quick-access-box {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-access-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2,
+  .grid-3,
+  .split-info,
+  .dashboard-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-section {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .consulta-option-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .triagem-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tipo-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .calendario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sintomas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .equipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .como-funciona-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .toast {
+    min-width: auto;
+    max-width: calc(100vw - 40px);
+  }
+
+  .unit-search-box {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .unidades-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-step {
+    font-size: 10px;
+    padding: 6px 2px;
+  }
+
+  .modal-card {
+    padding: 24px;
+  }
+
+  nav ul {
+    display: none;
+    position: fixed;
+    inset: 82px 0 0;
+    background: white;
+    flex-direction: column;
+    padding: 24px;
+    gap: 18px;
+    font-size: 18px;
+    z-index: 999;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* ============================================================
+   NEUROLAB UX REFRESH - identidade, navegacao e modulos core
+   ============================================================ */
+:root {
+  --ink-900: #102027;
+  --ink-700: #253b45;
+  --ink-500: #52656f;
+  --clinical-teal: #007476;
+  --clinical-teal-2: #0f8d90;
+  --clinical-blue: #235789;
+  --clinical-mint: #dff3ef;
+  --clinical-amber: #b7791f;
+  --surface: #ffffff;
+  --surface-soft: #f4f8f8;
+  --line-soft: #d7e5e5;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --sombra: 0 10px 28px rgba(16, 32, 39, 0.08);
+  --sombra-lg: 0 18px 48px rgba(16, 32, 39, 0.12);
+}
+
+body {
+  color: var(--ink-900);
+  background: #fbfdfd;
+  letter-spacing: 0;
+}
+
+.topbar {
+  background: var(--ink-900);
+}
+
+header {
+  border-bottom: 1px solid rgba(16, 32, 39, 0.08);
+  box-shadow: 0 4px 18px rgba(16, 32, 39, 0.04);
+}
+
+.navbar {
+  height: 76px;
+  gap: 18px;
+}
+
+.logo {
+  color: var(--ink-900);
+  font-size: 18px;
+}
+
+.logo img {
+  width: 58px;
+  height: 58px;
+  border-radius: 8px;
+}
+
+nav ul {
+  gap: 4px;
+}
+
+nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--ink-700);
+  font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+  background: var(--clinical-mint);
+  color: var(--clinical-teal);
+}
+
+.btn {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background: var(--clinical-teal);
+}
+
+.btn-primary:hover {
+  background: #005f61;
+}
+
+.btn-light {
+  color: var(--clinical-teal);
+  border-color: var(--line-soft);
+}
+
+.hero {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 48%, rgba(255,255,255,0.54) 100%),
+    url("../img/central-de-saude.jpg") center/cover;
+  padding: 72px 0 54px;
+}
+
+.hero::after,
+.video-box::after {
+  display: none;
+}
+
+.hero h1,
+.page-hero h1,
+.section-title h2 {
+  color: var(--ink-900);
+  letter-spacing: 0;
+}
+
+.hero h1 span {
+  color: var(--clinical-teal);
+}
+
+.hero-text,
+.section-title p,
+.card p,
+.info-row span {
+  color: var(--ink-500);
+}
+
+.hero-visual,
+.search-card,
+.card,
+.quick-access-box,
+.quick-btn,
+.exam-info-panel,
+.about-box,
+.patient-preview,
+.unit-search-box,
+.consulta-option-card,
+.modal-card,
+.unidade-rica,
+.dashboard-section,
+.perfil-card,
+.appointment-card {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--sombra);
+}
+
+.card:hover,
+.quick-btn:hover,
+.exam-sticker:hover,
+.exam-sticker.active,
+.tipo-btn:hover,
+.tipo-btn.selected,
+.unidade-card:hover,
+.unidade-card.selected,
+.medico-card:hover,
+.medico-card.selected {
+  transform: translateY(-2px);
+}
+
+.quick-access-box,
+.consulta-online,
+.about-box,
+.cta {
+  background: linear-gradient(135deg, var(--ink-900), var(--clinical-teal));
+}
+
+.page-hero {
+  min-height: 360px;
+  display: grid;
+  align-items: end;
+  background:
+    linear-gradient(90deg, rgba(16,32,39,0.86), rgba(0,116,118,0.68)),
+    url("../img/central-de-saude.jpg") center/cover;
+}
+
+.page-hero h1,
+.page-hero p {
+  color: #fff;
+}
+
+.page-hero .quick-access-label {
+  color: #fff;
+}
+
+body.home-lite #especialidades,
+body.home-lite #exames,
+body.home-lite #area-paciente,
+body.home-lite #unidades,
+body.home-lite #consulta-online {
+  display: none;
+}
+
+.home-proof-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.proof-panel,
+.trust-panel,
+.calendar-shell,
+.filter-panel,
+.portal-panel,
+.convenio-panel,
+.about-story,
+.metric-strip,
+.flow-access-card {
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--sombra);
+}
+
+.proof-panel,
+.trust-panel,
+.portal-panel,
+.convenio-panel,
+.about-story,
+.flow-access-card {
+  padding: 28px;
+}
+
+.proof-panel h2,
+.trust-panel h3,
+.portal-panel h3,
+.convenio-panel h3,
+.about-story h2,
+.flow-access-card h3 {
+  color: var(--ink-900);
+  margin-bottom: 10px;
+}
+
+.proof-list,
+.timeline-list,
+.check-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.proof-list li,
+.timeline-list li,
+.check-list li {
+  list-style: none;
+  color: var(--ink-700);
+  padding-left: 28px;
+  position: relative;
+}
+
+.proof-list li::before,
+.check-list li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--clinical-teal);
+  position: absolute;
+  left: 8px;
+  top: 10px;
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 22px;
+  overflow: hidden;
+}
+
+.metric-strip div {
+  padding: 18px;
+  border-right: 1px solid var(--line-soft);
+}
+
+.metric-strip div:last-child {
+  border-right: 0;
+}
+
+.metric-strip strong {
+  display: block;
+  color: var(--clinical-teal);
+  font-size: 28px;
+  font-family: 'Sora', sans-serif;
+}
+
+.metric-strip span {
+  color: var(--ink-500);
+  font-size: 13px;
+}
+
+.calendar-shell {
+  padding: 18px;
+}
+
+.calendar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.calendar-toolbar strong {
+  color: var(--ink-900);
+  font-family: 'Sora', sans-serif;
+}
+
+.calendar-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.calendar-nav button,
+.calendar-day,
+.slot-btn,
+.filter-chip {
+  border: 1px solid var(--line-soft);
+  background: #fff;
+  color: var(--ink-700);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.18s;
+}
+
+.calendar-nav button {
+  width: 36px;
+  height: 36px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.calendar-day {
+  min-height: 72px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: 8px 4px;
+}
+
+.calendar-day small {
+  color: var(--ink-500);
+  font-weight: 600;
+}
+
+.calendar-day.active,
+.slot-btn.active,
+.filter-chip.active {
+  border-color: var(--clinical-teal);
+  background: var(--clinical-mint);
+  color: var(--clinical-teal);
+}
+
+.calendar-day.disabled {
+  opacity: 0.36;
+  cursor: not-allowed;
+}
+
+.slots-panel {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.slots-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.slot-btn {
+  min-width: 84px;
+  padding: 12px 14px;
+}
+
+.filter-panel {
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.filter-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.filter-chip {
+  padding: 9px 12px;
+}
+
+.doctor-meta,
+.unit-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  color: var(--ink-500);
+  font-size: 13px;
+}
+
+.portal-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.portal-tab {
+  border: 1px solid var(--line-soft);
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 800;
+  color: var(--ink-700);
+  cursor: pointer;
+}
+
+.portal-tab.active {
+  background: var(--clinical-mint);
+  color: var(--clinical-teal);
+  border-color: var(--clinical-teal);
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.portal-card,
+.dependent-card,
+.plan-card {
+  background: #fff;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.portal-card strong,
+.dependent-card strong,
+.plan-card strong {
+  display: block;
+  color: var(--ink-900);
+  margin-bottom: 6px;
+}
+
+.dependent-form,
+.plan-search {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.dependent-form input,
+.plan-search input,
+.plan-search select {
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  padding: 12px;
+  font-family: inherit;
+}
+
+.plan-grid,
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.map-card {
+  min-height: 220px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  background: var(--surface-soft);
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.flow-access-card {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+}
+
+.status-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.status-list div {
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  padding: 12px;
+  background: var(--surface-soft);
+}
+
+@media (max-width: 980px) {
+  .home-proof-grid,
+  .metric-strip,
+  .portal-grid,
+  .plan-grid,
+  .about-values,
+  .status-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dependent-form,
+  .plan-search,
+  .flow-access-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+  }
+
+  nav ul {
+    inset: 70px 12px auto;
+    border: 1px solid var(--line-soft);
+    border-radius: 12px;
+    box-shadow: var(--sombra-lg);
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+
+  .calendar-days {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-proof-grid,
+  .metric-strip,
+  .portal-grid,
+  .plan-grid,
+  .about-values,
+  .status-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   NEUROLAB LEGACY + BOOTSTRAP POLISH
+   Mantem a estrutura antiga, com identidade propria por pagina
+   ============================================================ */
+body.nl-legacy {
+  --page-accent: var(--clinical-teal);
+  --page-accent-2: var(--clinical-blue);
+  --page-soft: #eef8f7;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(0, 116, 118, 0.08), transparent 28rem),
+    linear-gradient(180deg, #fbfdfd 0%, #f5faf9 100%);
+}
+
+body.nl-legacy.page-home {
+  --page-accent: #007476;
+  --page-accent-2: #235789;
+  --page-soft: #e5f5f2;
+}
+
+body.nl-legacy.page-sobre {
+  --page-accent: #315d62;
+  --page-accent-2: #7b5d2d;
+  --page-soft: #eef4f2;
+}
+
+body.nl-legacy.page-especialidades {
+  --page-accent: #235789;
+  --page-accent-2: #007476;
+  --page-soft: #edf4fb;
+}
+
+body.nl-legacy.page-exames {
+  --page-accent: #0f8d90;
+  --page-accent-2: #6f8f72;
+  --page-soft: #ecf8f5;
+}
+
+body.nl-legacy.page-unidades {
+  --page-accent: #2f6f5e;
+  --page-accent-2: #235789;
+  --page-soft: #edf7f1;
+}
+
+body.nl-legacy.page-convenios {
+  --page-accent: #9a6a16;
+  --page-accent-2: #007476;
+  --page-soft: #fff7e8;
+}
+
+body.nl-legacy.page-teleconsulta {
+  --page-accent: #235789;
+  --page-accent-2: #4b5fb5;
+  --page-soft: #eef3ff;
+}
+
+body.nl-legacy.page-paciente {
+  --page-accent: #007476;
+  --page-accent-2: #102027;
+  --page-soft: #ecf7f7;
+}
+
+body.nl-legacy.page-agendamento {
+  --page-accent: #007476;
+  --page-accent-2: #235789;
+  --page-soft: #f1faf9;
+}
+
+body.nl-legacy header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(18px);
+}
+
+body.nl-legacy nav a.active {
+  background: color-mix(in srgb, var(--page-accent) 13%, #ffffff);
+  color: var(--page-accent);
+}
+
+body.nl-legacy .hero,
+body.nl-legacy .page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+body.nl-legacy .hero {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.80) 52%, rgba(255, 255, 255, 0.56)),
+    url("../img/central-de-saude.jpg") center/cover;
+}
+
+body.nl-legacy .page-hero {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  background:
+    linear-gradient(115deg, color-mix(in srgb, var(--page-accent-2) 88%, #102027), color-mix(in srgb, var(--page-accent) 72%, transparent)),
+    url("../img/central-de-saude.jpg") center/cover;
+}
+
+body.nl-legacy.page-exames .page-hero,
+body.nl-legacy.page-agendamento .page-hero {
+  background:
+    linear-gradient(115deg, rgba(16, 32, 39, 0.86), color-mix(in srgb, var(--page-accent) 68%, transparent)),
+    url("../img/Diagnpsticos-completos.jpg") center/cover;
+}
+
+body.nl-legacy.page-unidades .page-hero,
+body.nl-legacy.page-paciente .page-hero {
+  background:
+    linear-gradient(115deg, rgba(16, 32, 39, 0.84), color-mix(in srgb, var(--page-accent) 70%, transparent)),
+    url("../img/Area-de-espera.jpg") center/cover;
+}
+
+.page-ambient-line {
+  position: absolute;
+  left: max(24px, calc((100vw - 1180px) / 2));
+  bottom: 0;
+  z-index: 2;
+  width: min(360px, 42vw);
+  height: 5px;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(90deg, var(--page-accent), var(--page-accent-2));
+}
+
+body.nl-legacy .section-title h2::after,
+body.nl-legacy .modal-card h3::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--page-accent), var(--page-accent-2));
+}
+
+body.nl-legacy .section-title {
+  max-width: 850px;
+}
+
+body.nl-legacy .modal-card,
+body.nl-legacy .card,
+body.nl-legacy .quick-btn,
+body.nl-legacy .unidade-rica,
+body.nl-legacy .consulta-option-card,
+body.nl-legacy .dashboard-section,
+body.nl-legacy .exam-info-panel,
+body.nl-legacy .proof-panel,
+body.nl-legacy .trust-panel,
+body.nl-legacy .portal-panel,
+body.nl-legacy .convenio-panel,
+body.nl-legacy .flow-access-card {
+  border: 1px solid color-mix(in srgb, var(--page-accent) 16%, var(--line-soft));
+}
+
+body.nl-legacy .quick-btn,
+body.nl-legacy .tipo-btn,
+body.nl-legacy .unidade-card,
+body.nl-legacy .medico-card,
+body.nl-legacy .portal-card,
+body.nl-legacy .plan-card,
+body.nl-legacy .dependent-card {
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+body.nl-legacy .quick-btn:hover,
+body.nl-legacy .tipo-btn:hover,
+body.nl-legacy .unidade-card:hover,
+body.nl-legacy .medico-card:hover,
+body.nl-legacy .portal-card:hover,
+body.nl-legacy .plan-card:hover,
+body.nl-legacy .dependent-card:hover {
+  border-color: color-mix(in srgb, var(--page-accent) 50%, var(--line-soft));
+  box-shadow: 0 16px 36px rgba(16, 32, 39, 0.12);
+}
+
+body.nl-legacy .btn-primary,
+body.nl-legacy .slot-btn.active,
+body.nl-legacy .calendar-day.active,
+body.nl-legacy .portal-tab.active {
+  background: var(--page-accent);
+  border-color: var(--page-accent);
+}
+
+body.nl-legacy .btn-primary:hover {
+  background: color-mix(in srgb, var(--page-accent) 82%, #102027);
+  border-color: color-mix(in srgb, var(--page-accent) 82%, #102027);
+}
+
+body.nl-legacy .btn-light {
+  background: #fff;
+  color: var(--page-accent);
+}
+
+body.nl-legacy .form-control,
+body.nl-legacy .form-select {
+  border-radius: 9px;
+  border-color: var(--line-soft);
+  min-height: 44px;
+}
+
+body.nl-legacy .form-control:focus,
+body.nl-legacy .form-select:focus {
+  border-color: var(--page-accent);
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--page-accent) 17%, transparent);
+}
+
+body.page-home .home-proof-grid {
+  position: relative;
+}
+
+body.page-home .trust-panel {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+    linear-gradient(135deg, var(--page-soft), #fff);
+}
+
+body.page-exames .exam-info-panel {
+  border-left: 5px solid var(--page-accent);
+}
+
+body.page-exames .exam-sticker.active {
+  background: var(--page-soft);
+  border-color: var(--page-accent);
+}
+
+body.page-unidades .unidade-rica {
+  background:
+    linear-gradient(180deg, #fff, #fff),
+    linear-gradient(135deg, var(--page-soft), transparent);
+}
+
+body.page-unidades .map-card {
+  min-height: 240px;
+}
+
+body.page-teleconsulta .consulta-option-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.96)),
+    linear-gradient(135deg, var(--page-soft), #fff);
+}
+
+body.page-teleconsulta .flow-access-card {
+  border-top: 4px solid var(--page-accent);
+}
+
+body.page-paciente .dashboard-section,
+body.page-paciente .perfil-card {
+  background: linear-gradient(180deg, #fff, color-mix(in srgb, var(--page-soft) 45%, #fff));
+}
+
+body.page-convenios .plan-card {
+  border-top: 4px solid var(--page-accent);
+}
+
+body.page-agendamento .modal-agendamento-card {
+  background:
+    linear-gradient(180deg, #fff, #fff),
+    linear-gradient(135deg, var(--page-soft), transparent);
+}
+
+body.page-agendamento .progress-fill {
+  background: linear-gradient(90deg, var(--page-accent), var(--page-accent-2));
+}
+
+body.page-agendamento .progress-step.done,
+body.page-agendamento .progress-step.active {
+  color: var(--page-accent);
+}
+
+body.page-agendamento .calendar-shell {
+  border-top: 4px solid var(--page-accent);
+}
+
+@media (max-width: 768px) {
+  body.nl-legacy header {
+    position: sticky;
+  }
+
+  .page-ambient-line {
+    left: 18px;
+    width: min(260px, 68vw);
+  }
+}
+

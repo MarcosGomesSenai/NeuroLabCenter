@@ -1,0 +1,1577 @@
+/* ============================================================
+   NEUROLAB FINAL UI PASS - identidade unificada + Bootstrap
+   ============================================================ */
+:root {
+  --verde-principal: #007476;
+  --verde-secundario: #48a3a7;
+  --verde-muito-claro: #eaf7f7;
+  --verde-dark: #0f3f40;
+  --texto: #171827;
+  --texto-claro: #60677a;
+  --fundo: #f7f8fc;
+  --borda: #dfe3ee;
+  --sombra: 0 14px 34px rgba(15, 63, 64, 0.10);
+  --sombra-lg: 0 28px 60px rgba(15, 63, 64, 0.16);
+  --radius: 18px;
+  --radius-lg: 28px;
+}
+
+body,
+body.nl-legacy,
+h1,
+h2,
+h3,
+h4,
+.logo,
+.btn {
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+body.nl-legacy,
+body.nl-legacy.page-home,
+body.nl-legacy.page-sobre,
+body.nl-legacy.page-especialidades,
+body.nl-legacy.page-medicos,
+body.nl-legacy.page-exames,
+body.nl-legacy.page-unidades,
+body.nl-legacy.page-convenios,
+body.nl-legacy.page-teleconsulta,
+body.nl-legacy.page-paciente,
+body.nl-legacy.page-agendamento,
+body.nl-legacy.page-legal {
+  --page-accent: #007476;
+  --page-accent-2: #48a3a7;
+  --page-soft: #eaf7f7;
+}
+
+body.nl-legacy {
+  background: #f7f8fc;
+}
+
+.topbar {
+  background: #0f3f40;
+}
+
+header {
+  border-bottom-color: #e8eaf2;
+}
+
+.navbar {
+  gap: 16px;
+}
+
+.logo {
+  color: #0f3f40;
+  font-weight: 900;
+}
+
+nav ul {
+  gap: 12px;
+}
+
+nav a {
+  padding: 9px 11px;
+  border-radius: 12px;
+  font-weight: 800;
+  color: #30344a;
+}
+
+nav a:hover,
+nav a.active {
+  background: #eaf7f7;
+  color: #007476;
+}
+
+.auth-buttons {
+  display: none !important;
+}
+
+.nav-auth-item {
+  margin-left: 2px;
+}
+
+.nav-auth-item a {
+  border: 1px solid #d9dced;
+}
+
+.nav-auth-item .nav-register {
+  background: #007476;
+  color: #fff;
+  border-color: #007476;
+}
+
+.nav-auth-item .nav-register:hover {
+  background: #005f61;
+  color: #fff;
+}
+
+.btn-primary,
+.btn-primary:disabled {
+  background: #007476;
+  border-color: #007476;
+}
+
+.btn-primary:hover {
+  background: #005f61;
+  box-shadow: 0 14px 32px rgba(0, 116, 118, 0.28);
+}
+
+.btn-light {
+  color: #007476;
+  border-color: #d9dced;
+}
+
+.hero h1,
+.page-hero h1,
+.section-title h2 {
+  letter-spacing: 0;
+}
+
+.page-hero,
+body.nl-legacy.page-exames .page-hero,
+body.nl-legacy.page-agendamento .page-hero,
+body.nl-legacy.page-unidades .page-hero,
+body.nl-legacy.page-paciente .page-hero {
+  background:
+    linear-gradient(115deg, rgba(15, 63, 64, 0.90), rgba(0, 116, 118, 0.72)),
+    url("../img/central-de-saude.jpg") center/cover !important;
+}
+
+.medicos-hero {
+  background:
+    linear-gradient(115deg, rgba(15, 63, 64, 0.88), rgba(0, 116, 118, 0.70)),
+    url("../img/Area-de-espera.jpg") center/cover !important;
+}
+
+#modalCadastro .modal-card {
+  max-width: min(980px, calc(100vw - 28px));
+  max-height: min(88vh, 820px);
+  overflow: auto;
+  padding: clamp(20px, 3vw, 34px);
+}
+
+#modalCadastro .modal-header-icon {
+  display: none;
+}
+
+#modalCadastro h3 {
+  font-size: clamp(22px, 2.5vw, 30px);
+}
+
+#modalCadastro .cadastro-tabs {
+  display: inline-flex;
+  width: auto;
+  background: #f5f6fb;
+  border: 1px solid #e1e4ee;
+  border-radius: 14px;
+  padding: 4px;
+}
+
+#modalCadastro .cadastro-tab {
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+#modalCadastro .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#modalCadastro .form-group {
+  margin-bottom: 12px;
+}
+
+#modalCadastro .checkbox-group {
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  border: 1px solid #e4e7f0;
+  border-radius: 12px;
+  background: #fbfcff;
+}
+
+#modalCadastro .btn-full {
+  margin-top: 8px;
+}
+
+.split-info {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.split-info .section-title h2 {
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.split-info .section-title p {
+  font-size: 15px;
+}
+
+.info-list {
+  gap: 10px;
+}
+
+.info-list .info-row {
+  padding: 14px 16px;
+  border-radius: 14px;
+}
+
+.info-list .info-row strong {
+  font-size: 15px;
+}
+
+.info-list .info-row span {
+  font-size: 13px;
+}
+
+.doctor-filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.doctor-filter-chip {
+  border: 1px solid #dfe3ee;
+  background: #fff;
+  color: #30344a;
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-weight: 800;
+}
+
+.doctor-filter-chip.active {
+  background: #007476;
+  border-color: #007476;
+  color: #fff;
+}
+
+.doctor-specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.doctor-profile-card {
+  background: #fff;
+  border: 1px solid #e1e4ee;
+  border-radius: 18px;
+  padding: 18px;
+  display: grid;
+  gap: 14px;
+  box-shadow: 0 10px 24px rgba(15, 63, 64, 0.07);
+}
+
+.doctor-profile-top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.doctor-photo {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eaf7f7;
+  color: #007476;
+  font-weight: 900;
+  border: 1px solid #d9dced;
+}
+
+.doctor-photo.small {
+  width: 44px;
+  height: 44px;
+  font-size: 14px;
+}
+
+.doctor-profile-top strong {
+  display: block;
+  color: #0f3f40;
+  font-size: 17px;
+}
+
+.doctor-profile-top span,
+.doctor-profile-meta {
+  color: #60677a;
+  font-size: 13px;
+}
+
+.doctor-profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.doctor-profile-meta span {
+  border: 1px solid #e1e4ee;
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: #fbfcff;
+}
+
+.unit-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.unit-showcase-card {
+  overflow: hidden;
+  border: 1px solid #e1e4ee;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(15, 63, 64, 0.08);
+}
+
+.unit-showcase-card > img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.unit-showcase-body {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.unit-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.unit-heading h3 {
+  font-size: 20px;
+  color: #0f3f40;
+}
+
+.unit-heading span {
+  color: #007476;
+  font-weight: 900;
+}
+
+.unit-resource-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.unit-resource-grid span,
+.plan-badges small {
+  border: 1px solid #e1e4ee;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: #f7f8fc;
+  color: #30344a;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.virtual-unit-note {
+  border-radius: 16px;
+  background: #eaf7f7;
+  color: #007476;
+  padding: 16px;
+  font-weight: 800;
+}
+
+.plan-card-rich {
+  display: grid;
+  gap: 12px;
+}
+
+.plan-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.patient-app-shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 22px;
+}
+
+.patient-sidebar,
+.patient-main-panel,
+.patient-card-lg,
+.patient-module-grid article {
+  background: #fff;
+  border: 1px solid #e1e4ee;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(15, 63, 64, 0.08);
+}
+
+.patient-sidebar {
+  padding: 22px;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.patient-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  background: #007476;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.patient-main-panel {
+  padding: 20px;
+}
+
+.patient-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.patient-kpis div {
+  border-radius: 16px;
+  background: #f7f8fc;
+  padding: 14px;
+}
+
+.patient-kpis strong {
+  display: block;
+  color: #007476;
+  font-size: 24px;
+}
+
+.patient-card-lg {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.patient-card-lg h3 {
+  font-size: 22px;
+  color: #0f3f40;
+}
+
+.patient-action-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.patient-module-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.patient-module-grid article {
+  padding: 16px;
+}
+
+.patient-module-grid strong {
+  display: block;
+  color: #0f3f40;
+  margin-bottom: 6px;
+}
+
+.telemedicine-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 26px;
+  align-items: stretch;
+}
+
+.telemedicine-copy h1 {
+  color: #fff;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.05;
+}
+
+.telemedicine-copy p {
+  color: rgba(255,255,255,0.88);
+  max-width: 680px;
+}
+
+.tele-alert {
+  display: inline-block;
+  margin: 16px 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.24);
+}
+
+.telemedicine-card,
+.telemedicine-grid article {
+  background: #fff;
+  border: 1px solid #e1e4ee;
+  border-radius: 22px;
+  padding: 22px;
+}
+
+.telemedicine-card ol {
+  margin: 14px 0 0 20px;
+  color: #30344a;
+}
+
+.telemedicine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.dr-booking-card {
+  max-width: 980px;
+  padding: 0;
+  border: 1px solid #aeb6c9;
+  border-radius: 18px;
+  box-shadow: none;
+  background: transparent;
+}
+
+.dr-booking-title {
+  text-align: center;
+  color: #007476;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 900;
+  margin-bottom: 26px;
+}
+
+.dr-search-card {
+  max-width: 680px;
+  margin: 0 auto;
+  border: 1px solid #aeb6c9;
+  border-radius: 18px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.dr-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dr-tabs button {
+  border: 0;
+  border-bottom: 1px solid #aeb6c9;
+  background: #fff;
+  color: #007476;
+  padding: 17px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.dr-tabs button.active {
+  background: #007476;
+  color: #fff;
+}
+
+.dr-tabs.compact button {
+  font-size: 16px;
+  padding: 12px;
+}
+
+.dr-search-body {
+  padding: 20px;
+}
+
+.dr-search-body label,
+.dr-filter-card label {
+  display: block;
+  color: #171827;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.dr-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #d9dced;
+  border-radius: 18px;
+  padding: 0 14px;
+  min-height: 58px;
+}
+
+.dr-input-wrap input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 18px;
+}
+
+.dr-search-button {
+  width: 100%;
+  margin-top: 20px;
+  min-height: 58px;
+  border: 0;
+  border-radius: 999px;
+  background: #007476;
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.dr-results-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.dr-filter-card,
+.dr-slots-card {
+  background: #fff;
+  border: 1px solid #aeb6c9;
+  border-radius: 18px;
+}
+
+.dr-filter-card {
+  padding: 14px;
+}
+
+.dr-filter-card select {
+  width: 100%;
+  border: 1px solid #d9dced;
+  border-radius: 15px;
+  padding: 13px 14px;
+  margin-bottom: 16px;
+}
+
+.dr-location-button {
+  border: 0;
+  background: transparent;
+  color: #007476;
+  font-weight: 900;
+  margin: -4px 0 18px;
+}
+
+.dr-slots-card {
+  padding: 20px;
+}
+
+.dr-date-row {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+.dr-date,
+.dr-arrow,
+.dr-calendar-button {
+  border: 1px solid #d9dced;
+  background: #fff;
+  min-height: 64px;
+  padding: 10px 18px;
+  color: #171827;
+}
+
+.dr-date {
+  min-width: 112px;
+}
+
+.dr-date.active {
+  background: #007476;
+  color: #fff;
+  border-color: #007476;
+}
+
+.dr-date strong,
+.dr-date span {
+  display: block;
+}
+
+.dr-arrow {
+  width: 42px;
+  border-radius: 999px;
+  margin: 10px 10px 0 0;
+  min-height: 42px;
+  padding: 0;
+}
+
+.dr-calendar-button {
+  border-radius: 8px;
+  margin-left: 14px;
+  font-size: 13px;
+}
+
+.dr-doctor-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.dr-doctor-line strong,
+.dr-doctor-line span {
+  display: block;
+}
+
+.dr-unit-panel {
+  border: 1px solid #d9dced;
+  border-radius: 9px;
+  padding: 18px;
+}
+
+.dr-unit-panel h3 {
+  color: #007476;
+  font-size: 22px;
+}
+
+.dr-periods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.dr-periods button {
+  border: 1px solid #d9dced;
+  border-radius: 999px;
+  background: #fff;
+  padding: 10px 14px;
+  font-weight: 800;
+}
+
+.dr-periods button.active {
+  background: #007476;
+  border-color: #007476;
+  color: #fff;
+}
+
+.dr-confirm-panel,
+.dr-success {
+  margin-top: 18px;
+  border-radius: 16px;
+  padding: 14px;
+  background: #eaf7f7;
+  color: #0f3f40;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.dr-success {
+  display: block;
+  background: #ecfdf3;
+  color: #11623b;
+  font-weight: 900;
+}
+
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .doctor-specialty-grid,
+  .telemedicine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dr-results-layout,
+  .patient-app-shell,
+  .telemedicine-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 72px;
+  }
+
+  nav ul {
+    gap: 6px;
+  }
+
+  nav ul.open {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #modalCadastro .form-row,
+  .doctor-specialty-grid,
+  .unit-showcase-grid,
+  .patient-kpis,
+  .patient-module-grid,
+  .telemedicine-grid,
+  .split-info {
+    grid-template-columns: 1fr;
+  }
+
+  .dr-date-row {
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  .dr-confirm-panel,
+  .patient-card-lg {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+/* ============================================================
+   CORRECAO VISUAL FINAL - clinico, fixo e com melhor contraste
+   ============================================================ */
+:root {
+  --verde-principal: #007476;
+  --verde-secundario: #48a3a7;
+  --verde-muito-claro: #eaf7f7;
+  --verde-dark: #0f3f40;
+  --texto: #1e293b;
+  --texto-claro: #536274;
+  --fundo: #f7fbfb;
+  --borda: #d8eeee;
+  --sombra: 0 14px 34px rgba(0, 116, 118, 0.10);
+  --sombra-lg: 0 26px 58px rgba(15, 63, 64, 0.16);
+}
+
+body.nl-legacy,
+body.nl-legacy.page-home,
+body.nl-legacy.page-sobre,
+body.nl-legacy.page-especialidades,
+body.nl-legacy.page-medicos,
+body.nl-legacy.page-exames,
+body.nl-legacy.page-unidades,
+body.nl-legacy.page-convenios,
+body.nl-legacy.page-teleconsulta,
+body.nl-legacy.page-paciente,
+body.nl-legacy.page-agendamento,
+body.nl-legacy.page-legal {
+  --page-accent: #007476;
+  --page-accent-2: #48a3a7;
+  --page-soft: #eaf7f7;
+}
+
+body.nl-legacy {
+  padding-top: 118px;
+  background: #f7fbfb;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1300;
+  height: 36px;
+  overflow: hidden;
+  background: #0f3f40 !important;
+  padding: 7px 0;
+}
+
+.topbar-content {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+header,
+body.nl-legacy header {
+  position: fixed !important;
+  top: 36px !important;
+  left: 0;
+  right: 0;
+  z-index: 1290;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid #dce8e8;
+  box-shadow: 0 10px 30px rgba(15, 63, 64, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.navbar {
+  height: 82px;
+  gap: 14px;
+}
+
+.logo {
+  color: #0f3f40;
+  font-size: 19px;
+  min-width: max-content;
+}
+
+.logo img {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+}
+
+nav {
+  flex: 1;
+}
+
+nav ul {
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+nav a {
+  color: #263945;
+  font-size: 13.5px;
+  padding: 8px 9px;
+  border-radius: 10px;
+}
+
+nav a:hover,
+nav a.active {
+  background: #eaf7f7;
+  color: #007476;
+}
+
+.nav-auth-item a {
+  border: 1px solid #cfe4e4;
+  background: #fff;
+  color: #007476;
+}
+
+.nav-auth-item .nav-register {
+  background: #007476;
+  border-color: #007476;
+  color: #fff;
+}
+
+.nav-auth-item .nav-register:hover {
+  background: #005f61;
+  color: #fff;
+}
+
+.btn-primary,
+.btn-primary:disabled,
+.doctor-filter-chip.active,
+.dr-tabs button.active,
+.dr-date.active,
+.dr-periods button.active {
+  background: #007476 !important;
+  border-color: #007476 !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.dr-search-button:hover {
+  background: #005f61 !important;
+  border-color: #005f61 !important;
+  box-shadow: 0 14px 32px rgba(0, 116, 118, 0.24);
+}
+
+.btn-light,
+.doctor-photo,
+.unit-heading span,
+.patient-kpis strong,
+.dr-booking-title,
+.dr-unit-panel h3 {
+  color: #007476 !important;
+}
+
+.page-hero,
+body.nl-legacy.page-exames .page-hero,
+body.nl-legacy.page-agendamento .page-hero,
+body.nl-legacy.page-unidades .page-hero,
+body.nl-legacy.page-paciente .page-hero,
+.medicos-hero {
+  background:
+    linear-gradient(115deg, rgba(15, 63, 64, 0.90), rgba(0, 116, 118, 0.68)),
+    url("../img/central-de-saude.jpg") center/cover !important;
+}
+
+.consulta-online {
+  background: #f7fbfb !important;
+  color: #1e293b !important;
+}
+
+.telemedicine-copy h1 {
+  color: #0f3f40 !important;
+}
+
+.telemedicine-copy p {
+  color: #536274 !important;
+}
+
+.tele-alert {
+  background: #eaf7f7 !important;
+  color: #0f3f40 !important;
+  border-color: #cfe4e4 !important;
+}
+
+.telemedicine-card,
+.telemedicine-grid article {
+  border-color: #d8eeee;
+  box-shadow: 0 12px 30px rgba(15, 63, 64, 0.08);
+}
+
+.dr-booking-card {
+  max-width: 1120px;
+  border: 0;
+  background: transparent;
+}
+
+.dr-search-card,
+.dr-filter-card,
+.dr-slots-card {
+  border: 1px solid #aebdc6;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 16px 38px rgba(15, 63, 64, 0.08);
+}
+
+.dr-search-body {
+  padding: 22px;
+}
+
+.dr-search-body label,
+.dr-filter-card label {
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 14px;
+}
+
+.dr-input-wrap,
+.dr-plan-select,
+.dr-filter-card select {
+  min-height: 54px;
+  border: 1px solid #d7e2e7;
+  border-radius: 16px;
+  background: #fff;
+  color: #0f172a;
+  font-size: 16px;
+}
+
+.dr-plan-select {
+  width: 100%;
+  padding: 0 14px;
+}
+
+.dr-search-button {
+  background: #007476;
+  color: #fff;
+  min-height: 56px;
+}
+
+.dr-results-layout {
+  grid-template-columns: 330px minmax(0, 1fr);
+  gap: 28px;
+}
+
+.dr-filter-card {
+  padding: 0 14px 16px;
+  overflow: hidden;
+}
+
+.dr-slots-card {
+  padding: 22px;
+}
+
+.dr-date,
+.dr-calendar-button,
+.dr-arrow,
+.dr-periods button {
+  border-color: #d7e2e7;
+}
+
+.dr-date.active strong,
+.dr-date.active span {
+  color: #fff;
+}
+
+.dr-unit-panel {
+  border-color: #d7e2e7;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.dr-confirm-panel {
+  background: #eaf7f7;
+  color: #0f3f40;
+}
+
+.doctor-photo {
+  background: #eaf7f7;
+  border-color: #cfe4e4;
+}
+
+.patient-avatar {
+  background: #007476;
+}
+
+.virtual-unit-note {
+  background: #eaf7f7;
+  color: #0f3f40;
+}
+
+@media (max-width: 1120px) {
+  nav a {
+    font-size: 12.5px;
+    padding: 7px;
+  }
+
+  .logo span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body.nl-legacy {
+    padding-top: 106px;
+  }
+
+  .topbar {
+    height: 32px;
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+  .topbar-content span:last-child {
+    display: none;
+  }
+
+  header,
+  body.nl-legacy header {
+    top: 32px !important;
+  }
+
+  .navbar {
+    height: 74px;
+  }
+
+  nav ul {
+    top: 74px;
+    right: 0;
+    left: auto;
+    width: min(320px, calc(100vw - 24px));
+  }
+
+  .dr-results-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   TELECONSULTA — MÉDICO SELECTION
+   ============================================================ */
+.tele-medico-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.tele-medico-card {
+  border: 2px solid var(--borda);
+  border-radius: 18px;
+  padding: 18px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  background: white;
+}
+
+.tele-medico-card:hover {
+  border-color: var(--verde-principal);
+  box-shadow: 0 6px 20px rgba(0,116,118,0.12);
+}
+
+.tele-medico-card.selecionado {
+  border-color: var(--verde-principal);
+  background: var(--verde-muito-claro);
+}
+
+.tele-medico-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--verde-principal);
+  color: white;
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.tele-medico-card strong {
+  display: block;
+  font-size: 14px;
+  color: var(--verde-dark);
+  margin-bottom: 4px;
+}
+
+.tele-medico-card small {
+  display: block;
+  color: var(--texto-claro);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.tele-medico-card .medico-rating {
+  font-size: 12px;
+  margin-top: 6px;
+  color: var(--texto-claro);
+}
+
+/* ============================================================
+   AGENDAMENTO — CALENDAR IMPROVED
+   ============================================================ */
+.cal-week {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.cal-day-col {
+  flex: 0 0 130px;
+  scroll-snap-align: start;
+}
+
+.cal-day-header {
+  background: var(--verde-principal);
+  color: white;
+  border-radius: 12px 12px 0 0;
+  padding: 10px 8px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.cal-day-header small {
+  display: block;
+  font-weight: 400;
+  font-size: 11px;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+.cal-period-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--texto-claro);
+  padding: 6px 8px 2px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.cal-slots {
+  border: 1px solid var(--borda);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  padding: 6px;
+  display: grid;
+  gap: 6px;
+}
+
+.cal-slot {
+  padding: 7px 6px;
+  border: 1.5px solid var(--borda);
+  border-radius: 10px;
+  background: white;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-align: center;
+  color: var(--texto);
+}
+
+.cal-slot:hover {
+  border-color: var(--verde-principal);
+  color: var(--verde-principal);
+  background: var(--verde-muito-claro);
+}
+
+.cal-slot.selecionado {
+  background: var(--verde-principal);
+  color: white;
+  border-color: var(--verde-principal);
+}
+
+.cal-slot.ocupado {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+  border-color: #e2e8f0;
+  text-decoration: line-through;
+}
+
+/* ============================================================
+   CONVÊNIOS EXAMES — IMPROVED LAYOUT
+   ============================================================ */
+.convenios-exames-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.convenio-card {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  padding: 20px 18px;
+  position: relative;
+}
+
+.convenio-card .conv-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.convenio-card strong {
+  display: block;
+  color: var(--verde-dark);
+  font-family: 'Sora', sans-serif;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.convenio-card span {
+  color: var(--texto-claro);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   AJUDA PAGE
+   ============================================================ */
+.ajuda-hero {
+  background: linear-gradient(135deg, rgba(0,116,118,.92), rgba(72,163,167,.82));
+  padding: 70px 0 60px;
+  color: white;
+  text-align: center;
+}
+
+.ajuda-hero h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  margin-bottom: 14px;
+}
+
+.ajuda-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chatbot-container {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--sombra-lg);
+  overflow: hidden;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.chatbot-header {
+  background: var(--verde-principal);
+  color: white;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.chatbot-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.chatbot-header-info strong {
+  display: block;
+  font-size: 16px;
+}
+
+.chatbot-header-info small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.chatbot-online {
+  width: 10px;
+  height: 10px;
+  background: #4ade80;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.chatbot-messages {
+  height: 380px;
+  overflow-y: auto;
+  padding: 20px;
+  background: var(--fundo);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.chatbot-msg {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.chatbot-msg.bot {
+  background: white;
+  color: var(--texto);
+  border-radius: 4px 18px 18px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  align-self: flex-start;
+}
+
+.chatbot-msg.user {
+  background: var(--verde-principal);
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+  align-self: flex-end;
+}
+
+.chatbot-msg.loading {
+  background: white;
+  align-self: flex-start;
+}
+
+.chatbot-typing span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--verde-secundario);
+  border-radius: 50%;
+  animation: bounce 1.2s infinite;
+  margin: 0 2px;
+}
+.chatbot-typing span:nth-child(2) { animation-delay: 0.2s; }
+.chatbot-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+}
+
+.chatbot-quick-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+  border-top: 1px solid var(--borda);
+  background: white;
+}
+
+.chatbot-quick-actions button {
+  border: 1.5px solid var(--borda);
+  background: white;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--verde-dark);
+  font-weight: 600;
+}
+
+.chatbot-quick-actions button:hover {
+  background: var(--verde-muito-claro);
+  border-color: var(--verde-principal);
+}
+
+.chatbot-input-row {
+  display: flex;
+  gap: 10px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--borda);
+  background: white;
+}
+
+.chatbot-input-row input {
+  flex: 1;
+  border: 1.5px solid var(--borda);
+  border-radius: 24px;
+  padding: 10px 18px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.chatbot-input-row input:focus {
+  border-color: var(--verde-principal);
+}
+
+.chatbot-input-row button {
+  background: var(--verde-principal);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chatbot-input-row button:hover {
+  background: var(--verde-dark);
+}
+
+.chatbot-input-row button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.faq-ajuda-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0;
+}
+
+@media (max-width: 768px) {
+  .tele-medico-grid {
+    grid-template-columns: 1fr;
+  }
+  .cal-week {
+    gap: 8px;
+  }
+  .cal-day-col {
+    flex: 0 0 118px;
+  }
+  .convenios-exames-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

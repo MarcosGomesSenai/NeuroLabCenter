@@ -1,0 +1,73 @@
+/* Utility classes extracted from view-level inline styles. */
+.view-style-001 { margin-top:18px; }
+.view-style-002 { color:var(--verde-principal);font-weight:700; }
+.view-style-003 { margin-bottom:16px; }
+.view-style-004 { margin-top:16px; }
+.view-style-005 { margin-top:8px; width:100%; }
+.view-style-006 { margin-top:12px; }
+.view-style-007 { display:flex;gap:10px; }
+.view-style-008 { flex:1; }
+.view-style-009 { margin-top:8px; }
+.view-style-010 { font-weight:700; }
+.view-style-011 { margin: 16px 0; }
+.view-style-012 { gap:16px; }
+.view-style-013 { text-decoration:none; cursor:pointer; }
+.view-style-014 { margin:8px 0 0 16px; padding:0; }
+.view-style-015 { color:var(--verde-principal); font-family:'Sora',sans-serif; margin-bottom:16px; }
+.view-style-016 { text-align:center; margin-top:40px; padding:32px; background:var(--verde-muito-claro); border-radius:24px; }
+.view-style-017 { font-family:'Sora',sans-serif; color:var(--verde-dark); margin-bottom:8px; }
+.view-style-018 { color:var(--texto-claro); margin-bottom:20px; }
+.view-style-019 { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.view-style-020 { text-align: center; position: relative; display: inline-block; margin: 0 auto; }
+.view-style-021 { width: 96px; height: 96px; font-size: 32px; border-radius: 50%; margin-bottom: 12px; position: relative; overflow: hidden; cursor: pointer; }
+.view-style-022 { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.5); color: white; font-size: 11px; padding: 4px 0; font-weight: bold; }
+.view-style-023 { display: none; }
+.view-style-024 { text-align: center; margin-bottom: 18px; }
+.view-style-025 { font-size: 20px; color: var(--verde-dark); margin-bottom: 4px; }
+.view-style-026 { color: var(--texto-claro); font-size: 14px; }
+.view-style-027 { margin-bottom: 18px; }
+.view-style-028 { font-size: 12px; color: var(--texto-claro); font-weight: 800; margin-bottom: 6px; display: block; }
+.view-style-029 { width: 100%; border: 1px solid var(--borda); border-radius: 12px; padding: 10px; font-weight: bold; color: var(--texto); background: var(--fundo); }
+.view-style-030 { border:0; border-top: 1px solid var(--borda); margin: 10px 0; }
+.view-style-031 { box-shadow: none; border: 0; padding: 0; }
+.view-style-032 { margin-bottom: 8px; }
+.view-style-033 { color: var(--texto-claro); font-size: 14px; margin-top: 4px; }
+.view-style-034 { margin-bottom: 24px; }
+.view-style-035 { font-size: 18px; color: var(--verde-dark); margin-bottom: 12px; }
+.view-style-036 { border: 1px solid var(--borda); border-radius: 16px; padding: 16px; background: var(--fundo); }
+.view-style-037 { display: inline-block; padding: 4px 8px; background: #ecfdf3; color: #11623b; font-size: 11px; font-weight: 900; border-radius: 8px; margin-bottom: 8px; }
+.view-style-038 { display: block; font-size: 16px; margin-bottom: 4px; }
+.view-style-039 { color: var(--texto-claro); font-size: 14px; display: block; margin-bottom: 12px; }
+.view-style-040 { display:flex;gap:8px;flex-wrap:wrap; }
+.view-style-041 { padding: 6px 12px; font-size: 13px; }
+.view-style-042 { font-size: 13px; color: var(--texto-claro); margin-bottom: 12px; }
+.view-style-043 { width: 100%; font-size: 13px; }
+.view-style-044 { text-align:center; }
+.view-style-045 { background: linear-gradient(135deg, rgba(0,116,118,.9), rgba(72,163,167,.78)), url('../img/Diagnpsticos-completos.jpg') center/cover; }
+.view-style-046 { margin-top:18px;text-align:center; }
+.view-style-047 { text-align:center; margin-top: 32px; }
+.view-style-048 { background: rgba(255,255,255,0.16); color:white; }
+.view-style-049 { font-size:13px; opacity:.8; }
+.view-style-050 { display:none; }
+.view-style-051 { margin-bottom:12px; }
+.view-style-052 { color:var(--texto-claro); }
+.view-style-053 { color:var(--verde-principal); }
+.view-style-054 { font-weight:400; }
+.view-style-055 { max-width:840px; }
+.view-style-056 { margin-top:32px; }
+.view-style-057 { padding-left:20px; margin:12px 0; color:var(--texto-claro); }
+.view-style-058 { margin-top:12px; font-style:italic; color:var(--texto-claro); }
+.view-style-059 { font-size:22px; margin-bottom:16px; }
+.view-style-060 { margin-top:28px; }
+.view-style-061 { margin-top:22px; }
+.view-style-062 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:14px; }
+.view-style-063 { font-size:36px; margin-bottom:8px; }
+.view-style-064 { color:var(--verde-dark); font-size:14px; }
+.view-style-065 { font-size:13px; margin-top:4px; }
+.view-style-066 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:14px; }
+.view-style-067 { background:var(--fundo); border-radius:14px; }
+.view-style-068 { font-weight:700; margin-bottom:12px; color:var(--verde-dark); }
+.view-style-069 { display:none; margin-top:20px; }
+.view-style-070 { background:var(--fundo);font-weight:700; }
+.view-style-071 { background: linear-gradient(135deg, rgba(0,116,118,.88), rgba(72,163,167,.78)), url('../img/Area-de-espera.jpg') center/cover; }
+.view-style-072 { margin-top:16px;width:100%; }

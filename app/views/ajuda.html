@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central de Ajuda | NeuroLab Center</title>
+  <meta name="description" content="Central de ajuda da NeuroLab Center. Perguntas frequentes, chatbot IA e suporte ao agendamento." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-content">
+      <span><strong>NeuroLab Center</strong> | Neurologia, exames e teleconsulta</span>
+      <span>📞 (11) 4002-8922 &nbsp;|&nbsp; 📍 Santo André - SP</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="index.html">
+        <picture>
+          <source srcset="../../assets/img/logo1.webp" type="image/webp" />
+          <img alt="NeuroLab Center" src="../../assets/img/logo1.png" width="267" height="400" decoding="async" />
+        </picture>
+        <span>NeuroLab Center</span>
+      </a>
+      <nav>
+        <button class="menu-btn" onclick="abrirMenu()" aria-label="Menu">☰</button>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="exames.html">Exames</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="teleconsulta.html">Teleconsulta</a></li>
+          <li><a href="area-paciente.html">Área do Paciente</a></li>
+          <li><a href="ajuda.html" class="active">Ajuda</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a class="btn btn-light" href="index.html?modal=cadastro">Cadastrar</a>
+        <a class="btn btn-primary" href="index.html?modal=login">Entrar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="ajuda-hero">
+      <div class="container">
+        <span class="quick-access-label">Central de Ajuda</span>
+        <h1>Como podemos ajudar?</h1>
+        <p>Tire suas dúvidas com nosso chatbot IA ou consulte as perguntas frequentes abaixo.</p>
+      </div>
+    </section>
+
+    <!-- ATALHOS RÁPIDOS -->
+    <section class="content-band light">
+      <div class="container">
+        <div class="grid-3 view-style-012">
+          <a href="agendamento.html" class="card feature-card view-style-013">
+            <div class="icon">📅</div>
+            <h3>Agendar Consulta</h3>
+            <p>Marque sua consulta presencial em 6 passos simples.</p>
+          </a>
+          <a href="teleconsulta.html" class="card feature-card view-style-013">
+            <div class="icon">💻</div>
+            <h3>Teleconsulta</h3>
+            <p>Agende uma consulta por vídeo com o médico de sua escolha.</p>
+          </a>
+          <a href="area-paciente.html" class="card feature-card view-style-013">
+            <div class="icon">📋</div>
+            <h3>Ver Resultados</h3>
+            <p>Acesse exames, laudos e histórico na Área do Paciente.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHATBOT IA -->
+    <section class="content-band">
+      <div class="container">
+        <div class="section-title">
+          <h2>NeuroBot — Assistente IA</h2>
+          <p>Pergunte sobre agendamento, exames, convênios, cancelamento ou qualquer dúvida sobre o sistema.</p>
+        </div>
+
+        <div class="chatbot-container">
+          <div class="chatbot-header">
+            <div class="chatbot-avatar">🤖</div>
+            <div class="chatbot-header-info">
+              <strong>NeuroBot</strong>
+              <small><span class="chatbot-online"></span>Assistente IA · Não prescreve medicamentos</small>
+            </div>
+          </div>
+
+          <div class="chatbot-messages" id="botMessages">
+            <div class="chatbot-msg bot">
+              Olá! Sou o <strong>NeuroBot</strong>, assistente da NeuroLab Center. 😊<br><br>
+              Posso te ajudar a:
+              <ul class="view-style-014">
+                <li>Agendar ou cancelar consultas</li>
+                <li>Entender como funciona a teleconsulta</li>
+                <li>Ver informações sobre exames</li>
+                <li>Tirar dúvidas sobre convênios</li>
+                <li>Navegar pelo sistema</li>
+              </ul>
+              <br>Como posso te ajudar hoje?
+            </div>
+          </div>
+
+          <div class="chatbot-quick-actions">
+            <button onclick="enviarRapido('Como agendar uma consulta?')">📅 Como agendar?</button>
+            <button onclick="enviarRapido('Como funciona a teleconsulta?')">💻 Teleconsulta</button>
+            <button onclick="enviarRapido('Quais convênios são aceitos?')">🏥 Convênios</button>
+            <button onclick="enviarRapido('Como ver meus resultados de exames?')">📋 Resultados</button>
+            <button onclick="enviarRapido('Como cancelar ou reagendar minha consulta?')">❌ Cancelar</button>
+          </div>
+
+          <div class="chatbot-input-row">
+            <input type="text" id="botInput" placeholder="Digite sua dúvida..." onkeydown="if(event.key==='Enter') enviarMensagemBot()" />
+            <button id="botSendBtn" onclick="enviarMensagemBot()">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-band light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Perguntas Frequentes</h2>
+          <p>As dúvidas mais comuns dos nossos pacientes, respondidas com clareza.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Agendamento -->
+          <div class="col-12">
+            <h4 class="view-style-015">📅 Agendamento</h4>
+            <div class="faq-section">
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Preciso de pedido médico para agendar uma consulta?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Para <strong>consultas</strong>, não é necessário pedido médico — basta agendar direto pelo site. Para <strong>exames</strong>, pode ser exigido pedido médico dependendo do convênio. Na modalidade particular, todos os exames estão disponíveis sem pedido prévio.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Como funciona o processo de agendamento em 6 passos?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>O agendamento guia você por: (1) Tipo de atendimento, (2) Cobertura (Particular, Convênio ou SUS), (3) Unidade mais próxima, (4) Escolha do médico, (5) Data e horário disponível, (6) Confirmação. Ao selecionar um horário, ele fica reservado por <strong>10 minutos</strong> enquanto você confirma.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Como cancelar ou reagendar minha consulta?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Acesse a <strong>Área do Paciente</strong> e localize o agendamento desejado. Cancelamentos devem ser feitos com pelo menos <strong>24h de antecedência</strong> para consultas, e <strong>1h</strong> para exames. Cada CPF pode reagendar até <strong>2 vezes por mês</strong>.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>E se não tiver horário disponível no dia que quero?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Na etapa de escolha de horário, utilize o botão <strong>"Avise-me quando surgir uma desistência"</strong> para entrar na fila de espera. Quando um horário vagar, você receberá notificação por WhatsApp e terá 30 minutos para confirmar.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teleconsulta -->
+          <div class="col-12 view-style-009">
+            <h4 class="view-style-015">💻 Teleconsulta</h4>
+            <div class="faq-section">
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Como funciona a teleconsulta?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>A teleconsulta é uma consulta médica completa realizada por vídeo. Após agendar, você receberá um link da sala virtual. O botão de acesso fica disponível <strong>15 minutos antes</strong> do horário marcado. Você pode receber prescrições e atestados por e-mail.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Qual a diferença entre teleconsulta e o chat de dúvidas?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>O <strong>chat de dúvidas</strong> é gratuito, orientativo e utiliza IA — não prescreve remédios nem substitui consulta médica. A <strong>teleconsulta</strong> é uma consulta médica real por vídeo, com médico especialista, onde você pode receber diagnóstico, prescrição e atestado.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>O que preciso para participar de uma teleconsulta?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Você precisa de: <strong>câmera</strong> (webcam ou câmera do celular), <strong>microfone</strong> (embutido ou headset) e <strong>conexão estável</strong> de pelo menos 2 Mbps. A teleconsulta está disponível apenas nas modalidades <strong>Particular e Convênio</strong> — não é disponível pelo SUS.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Convênios -->
+          <div class="col-12 view-style-009">
+            <h4 class="view-style-015">🏥 Convênios e Pagamento</h4>
+            <div class="faq-section">
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Quais convênios são aceitos?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Aceitamos: <strong>Unimed, Bradesco Saúde, SulAmérica, Amil, Porto Seguro Saúde</strong> e <strong>NotreDame Intermédica</strong>. Também atendemos na modalidade <strong>particular</strong> e com cotas <strong>SUS</strong> (exceto teleconsulta). Em caso de dúvida sobre cobertura específica, entre em contato antes de agendar.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Preciso de autorização prévia do convênio para fazer exames?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Depende do plano: <strong>Unimed</strong> exige autorização prévia para todos os exames. <strong>Bradesco Saúde</strong> cobre EEG, ENMG e Polissonografia. <strong>SulAmérica</strong> tem cobertura completa para neurologia. Para <strong>Amil, Porto Seguro e NotreDame</strong>, verifique com seu plano. Na modalidade <strong>particular</strong>, nenhuma autorização é necessária.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exames e Resultados -->
+          <div class="col-12 view-style-009">
+            <h4 class="view-style-015">🔬 Exames e Resultados</h4>
+            <div class="faq-section">
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Em quanto tempo o resultado do exame fica disponível?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>O laudo é elaborado pelo neurologista responsável e disponibilizado na <strong>Área do Paciente em até 5 dias úteis</strong>. Você recebe uma notificação por WhatsApp e e-mail assim que o resultado estiver pronto.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Como acessar meus resultados de exames?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Acesse a <a href="area-paciente.html" class="view-style-002">Área do Paciente</a> com seu login e vá até a seção <strong>"Meus Exames"</strong>. Os laudos ficam disponíveis para download em PDF, protegidos com criptografia conforme a LGPD.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Vocês atendem crianças?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Sim! Temos <strong>neuropediatria</strong> com a Dra. Fernanda Lima Costa. Menores de 16 anos precisam que o responsável legal confirme o agendamento por link enviado via WhatsApp. A conta família permite que responsáveis gerenciem dependentes com permissões separadas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Privacidade e Conta -->
+          <div class="col-12 view-style-009">
+            <h4 class="view-style-015">🔒 Conta e Privacidade</h4>
+            <div class="faq-section">
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Meus dados estão protegidos?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Sim. A NeuroLab Center segue rigorosamente a <strong>LGPD (Lei Geral de Proteção de Dados)</strong>. Todos os dados sensíveis são criptografados em trânsito e em repouso. Você pode solicitar a exclusão dos seus dados a qualquer momento pela Área do Paciente ou pelo e-mail <strong>privacidade@neurolabcenter.com.br</strong>.</p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-pergunta" onclick="toggleFaq(this)" aria-expanded="false">
+                  <span>Esqueci minha senha. Como recuperar?</span>
+                  <span class="faq-seta">▼</span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Clique em <strong>"Entrar"</strong> no menu superior e, na tela de login, escolha <strong>"Esqueci minha senha"</strong>. Você receberá um link de redefinição no e-mail cadastrado. Se tiver dificuldades, entre em contato pelo WhatsApp (11) 4002-8922.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA contato -->
+        <div class="view-style-016">
+          <h3 class="view-style-017">Ainda com dúvidas?</h3>
+          <p class="view-style-018">Fale conosco diretamente — estamos prontos para ajudar.</p>
+          <div class="view-style-019">
+            <a href="https://wa.me/551140028922" target="_blank" class="btn btn-primary">💬 WhatsApp</a>
+            <a href="tel:1140028922" class="btn btn-light">📞 (11) 4002-8922</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/551140028922" target="_blank">💬</a>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>NeuroLab Center</h3>
+        <p>Clínica de Neurologia com atendimento humanizado, tecnologia e segurança.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="index.html">Home</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="exames.html">Exames</a>
+        <a href="unidades.html">Unidades</a>
+      </div>
+      <div>
+        <h4>Paciente</h4>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="teleconsulta.html">Teleconsulta</a>
+        <a href="area-paciente.html">Área do Paciente</a>
+        <a href="ajuda.html">Central de Ajuda</a>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+        <a href="politica-privacidade.html">Política de Privacidade</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>📞 (11) 4002-8922</p>
+        <p>✉ contato@neurolabcenter.com.br</p>
+        <p>📍 Santo André - SP</p>
+        <p>🕐 Seg-Sex: 7h–19h | Sáb: 8h–13h</p>
+        <div class="footer-legal">
+          <span class="footer-selo">🔒 LGPD</span>
+          <span class="footer-selo">🛡️ Dados Protegidos</span>
+        </div>
+      </div>
+    </div>
+    <div class="container copy">© 2026 NeuroLab Center. Todos os direitos reservados. | LGPD: seus dados são protegidos.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/shared/toast.js"></script>
+  <script src="../../assets/js/shared/auth-header.js"></script>
+  <script src="../../assets/js/shared/appointment-rules.js"></script>
+  <script src="../../assets/js/shared/navigation-search.js"></script>
+  <script src="../../assets/js/shared/exam-info.js"></script>
+  <script src="../../assets/js/shared/address-search.js"></script>
+  <script src="../../assets/js/shared/medical-chat.js"></script>
+  <script src="../../assets/js/shared/teleconsultation-room.js"></script>
+  <script src="../../assets/js/app/state-storage.js"></script>
+  <script src="../../assets/js/app/modals-navigation.js"></script>
+  <script src="../../assets/js/app/forms-auth.js"></script>
+  <script src="../../assets/js/app/booking-flow.js"></script>
+  <script src="../../assets/js/app/ratings-dashboard.js"></script>
+  <script src="../../assets/js/init/dom-ready.js"></script>
+  <script src="../../assets/js/pages/home-effects.js"></script>
+  <script src="../../assets/js/data/clinic-data.js"></script>
+  <script src="../../assets/js/pages/layout-home.js"></script>
+  <script src="../../assets/js/features/booking-basic.js"></script>
+  <script src="../../assets/js/pages/plans-units-patient.js"></script>
+  <script src="../../assets/js/pages/teleconsultation-page.js"></script>
+  <script src="../../assets/js/features/booking-search-legacy.js"></script>
+  <script src="../../assets/js/features/booking-search-v2.js"></script>
+  <script src="../../assets/js/pages/health-plans.js"></script>
+  <script src="../../assets/js/features/visual-polish.js"></script>
+  <script src="../../assets/js/features/command-search.js"></script>
+  <script src="../../assets/js/features/forms-validation.js"></script>
+  <script src="../../assets/js/features/favorites-plans-drafts.js"></script>
+  <script src="../../assets/js/features/action-panel.js"></script>
+  <script src="../../assets/js/init/legacy-startup.js"></script>
+  <script src="../../assets/js/features/booking-action-panel.js"></script>
+  <script src="../../assets/js/features/booking-suggestions.js"></script>
+  <script src="../../assets/js/features/booking-simple.js"></script>
+  <script src="../../assets/js/features/address-autocomplete.js"></script>
+  <script src="../../assets/js/pages/ajuda-chatbot.js"></script>
+</body>
+
+</html>

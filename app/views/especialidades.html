@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Especialidades | NeuroLab Center</title>
+  <meta name="description" content="Especialidades neurológicas da NeuroLab Center: neurologia geral, neuropediatria, sono, teleconsulta. Equipe médica qualificada e atendimento humanizado." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-content">
+      <span><strong>NeuroLab Center</strong> | Neurologia, exames e teleconsulta</span>
+      <span>📞 (11) 4002-8922 &nbsp;|&nbsp; 📍 Santo André - SP</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="logo" href="index.html">
+        <picture>
+          <source srcset="../../assets/img/logo1.webp" type="image/webp" />
+          <img alt="NeuroLab Center" src="../../assets/img/logo1.png" width="267" height="400" decoding="async" />
+        </picture>
+        <span>NeuroLab Center</span>
+      </a>
+      <nav>
+        <button class="menu-btn" onclick="abrirMenu()" aria-label="Menu">☰</button>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="exames.html">Exames</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="teleconsulta.html">Teleconsulta</a></li>
+          <li><a href="area-paciente.html">Área do Paciente</a></li>
+          <li><a href="ajuda.html">Ajuda</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a class="btn btn-light" href="index.html?modal=cadastro">Cadastrar</a>
+        <a class="btn btn-primary" href="index.html?modal=login">Entrar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="quick-access-label">Especialidades</span>
+        <h1>Atendimento neurológico para cada fase da vida.</h1>
+        <p>Consultas presenciais, teleconsulta, exames diagnósticos e suporte completo para famílias — do recém-nascido ao idoso.</p>
+        <div class="page-actions">
+          <button class="btn btn-light btn-big" onclick="abrirAgendamento()">Agendar consulta</button>
+          <a class="btn btn-primary btn-big" href="exames.html">Ver exames</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINHAS DE CUIDADO -->
+    <section class="content-band light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Linhas de cuidado</h2>
+          <p>Organizadas para adultos, adolescentes, crianças e responsáveis.</p>
+        </div>
+        <div class="grid-4 feature-grid">
+          <div class="card feature-card">
+            <div class="icon">🧠</div>
+            <h3>Neurologia geral</h3>
+            <p>Cefaleias, tontura, epilepsia, alterações de memória, dores neuropáticas e acompanhamento clínico contínuo.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="icon">👶</div>
+            <h3>Neuropediatria</h3>
+            <p>Atendimento infantil com conta família, responsável vinculado e fluxo de confirmação diferenciado para menores.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="icon">💤</div>
+            <h3>Sono e cognição</h3>
+            <p>Avaliação de distúrbios do sono, ronco, sonolência diurna, perda de memória e queixas cognitivas.</p>
+          </div>
+          <div class="card feature-card">
+            <div class="icon">💻</div>
+            <h3>Teleconsulta</h3>
+            <p>Consulta por vídeo para particular e convênio, com sala virtual segura e chat integrado com o médico.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUANDO PROCURAR UM NEUROLOGISTA -->
+    <section class="content-band">
+      <div class="container">
+        <div class="section-title">
+          <h2>Quando procurar um neurologista?</h2>
+          <p>Se você apresenta algum dos sintomas abaixo, agende uma avaliação.</p>
+        </div>
+        <div class="sintomas-grid">
+          <div class="sintoma-card" onclick="abrirAgendamento()">
+            <span class="sintoma-icone">🤕</span>
+            <h4>Dor de cabeça</h4>
+            <p>Enxaquecas frequentes, cefaleia tensional ou dor crônica que não melhora.</p>
+          </div>
+          <div class="sintoma-card" onclick="abrirAgendamento()">
+            <span class="sintoma-icone">😵</span>
+            <h4>Tontura e vertigem</h4>
+            <p>Sensação de desequilíbrio, vertigem posicional ou tonturas recorrentes.</p>
+          </div>
+          <div class="sintoma-card" onclick="abrirAgendamento()">
+            <span class="sintoma-icone">🧩</span>
+            <h4>Perda de memória</h4>
+            <p>Esquecimentos frequentes, dificuldade de concentração ou declínio cognitivo.</p>
+          </div>
+          <div class="sintoma-card" onclick="abrirAgendamento()">
+            <span class="sintoma-icone">⚡</span>
+            <h4>Formigamento</h4>
+            <p>Dormência, fraqueza nos membros ou sensações de choque elétrico.</p>
+          </div>
+          <div class="sintoma-card" onclick="abrirAgendamento()">
+            <span class="sintoma-icone">🌙</span>
+            <h4>Insônia</h4>
+            <p>Dificuldade para dormir, ronco excessivo, apneia ou sonolência diurna.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE MÉDICA → CTA para página de médicos -->
+    <section class="content-band light">
+      <div class="container view-style-044">
+        <div class="section-title">
+          <h2>Conheça nossa equipe médica</h2>
+          <p>Profissionais com titulação e ampla experiência em neurologia, neuropediatria, sono e cefaleia.</p>
+        </div>
+        <a class="btn btn-primary btn-big" href="medicos.html">Ver todos os médicos →</a>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="content-band">
+      <div class="container split-info">
+        <div>
+          <div class="section-title consulta-title-left">
+            <h2>Diferenciais do fluxo NeuroLab</h2>
+            <p>Recursos pensados para reduzir fricção sem abrir mão de segurança e LGPD.</p>
+          </div>
+        </div>
+        <div class="info-list">
+          <div class="info-row"><strong>Agendamento em 6 passos</strong><span>Tipo, cobertura, unidade, médico, horário e confirmação final.</span></div>
+          <div class="info-row"><strong>Hold de 10 minutos</strong><span>O horário fica reservado enquanto o paciente confirma.</span></div>
+          <div class="info-row"><strong>Conta família</strong><span>Responsáveis gerenciam dependentes menores e idosos com permissões separadas.</span></div>
+          <div class="info-row"><strong>Notificações críticas</strong><span>Confirmações, cancelamentos e alertas são enviados pelo canal prioritário disponível.</span></div>
+          <div class="info-row"><strong>Política de cancelamento</strong><span>24h para consultas, 1h para exames. Até 2 reagendamentos por mês.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINK PARA AJUDA -->
+    <section class="content-band light">
+      <div class="container view-style-044">
+        <div class="section-title">
+          <h2>Ficou com dúvidas?</h2>
+          <p>Acesse nossa Central de Ajuda com respostas completas e nosso chatbot IA para te orientar.</p>
+        </div>
+        <a class="btn btn-primary btn-big" href="ajuda.html">Central de Ajuda e Perguntas Frequentes →</a>
+      </div>
+    </section>
+  </main>
+
+  <a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/551140028922" target="_blank">💬</a>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>NeuroLab Center</h3>
+        <p>Clínica de Neurologia com atendimento humanizado, tecnologia e segurança.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="index.html">Home</a>
+        <a href="especialidades.html">Especialidades</a>
+        <a href="exames.html">Exames</a>
+        <a href="unidades.html">Unidades</a>
+      </div>
+      <div>
+        <h4>Paciente</h4>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="teleconsulta.html">Teleconsulta</a>
+        <a href="area-paciente.html">Área do Paciente</a>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+        <a href="ajuda.html">Central de Ajuda</a>
+        <a href="politica-privacidade.html">Política de Privacidade</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>📞 (11) 4002-8922</p>
+        <p>✉ contato@neurolabcenter.com.br</p>
+        <p>📍 Santo André - SP</p>
+        <p>🕐 Seg-Sex: 7h–19h | Sáb: 8h–13h</p>
+        <div class="footer-legal">
+          <span class="footer-selo">🔒 LGPD</span>
+          <span class="footer-selo">🛡️ Dados Protegidos</span>
+        </div>
+      </div>
+    </div>
+    <div class="container copy">© 2026 NeuroLab Center. Todos os direitos reservados. | LGPD: seus dados são protegidos.</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/shared/toast.js"></script>
+  <script src="../../assets/js/shared/auth-header.js"></script>
+  <script src="../../assets/js/shared/appointment-rules.js"></script>
+  <script src="../../assets/js/shared/navigation-search.js"></script>
+  <script src="../../assets/js/shared/exam-info.js"></script>
+  <script src="../../assets/js/shared/address-search.js"></script>
+  <script src="../../assets/js/shared/medical-chat.js"></script>
+  <script src="../../assets/js/shared/teleconsultation-room.js"></script>
+  <script src="../../assets/js/app/state-storage.js"></script>
+  <script src="../../assets/js/app/modals-navigation.js"></script>
+  <script src="../../assets/js/app/forms-auth.js"></script>
+  <script src="../../assets/js/app/booking-flow.js"></script>
+  <script src="../../assets/js/app/ratings-dashboard.js"></script>
+  <script src="../../assets/js/init/dom-ready.js"></script>
+  <script src="../../assets/js/pages/home-effects.js"></script>
+  <script src="../../assets/js/data/clinic-data.js"></script>
+  <script src="../../assets/js/pages/layout-home.js"></script>
+  <script src="../../assets/js/features/booking-basic.js"></script>
+  <script src="../../assets/js/pages/plans-units-patient.js"></script>
+  <script src="../../assets/js/pages/teleconsultation-page.js"></script>
+  <script src="../../assets/js/features/booking-search-legacy.js"></script>
+  <script src="../../assets/js/features/booking-search-v2.js"></script>
+  <script src="../../assets/js/pages/health-plans.js"></script>
+  <script src="../../assets/js/features/visual-polish.js"></script>
+  <script src="../../assets/js/features/command-search.js"></script>
+  <script src="../../assets/js/features/forms-validation.js"></script>
+  <script src="../../assets/js/features/favorites-plans-drafts.js"></script>
+  <script src="../../assets/js/features/action-panel.js"></script>
+  <script src="../../assets/js/init/legacy-startup.js"></script>
+  <script src="../../assets/js/features/booking-action-panel.js"></script>
+  <script src="../../assets/js/features/booking-suggestions.js"></script>
+  <script src="../../assets/js/features/booking-simple.js"></script>
+  <script src="../../assets/js/features/address-autocomplete.js"></script>
+</body>
+
+</html>
